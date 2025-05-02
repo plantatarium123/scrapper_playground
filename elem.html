@@ -1,0 +1,119 @@
+<select
+   class="ta-widget-input ng-pristine ng-untouched ng-valid"
+   id="ddlMake"
+   ng-options="make.Make for make in makes track by make.Make"
+   ng-model="searchSelection.SelectedMake"
+   ng-change="selectMake()"
+   tabindex="1"
+>
+   <option value="" disabled="" class="" selected="selected">Make</option>
+   <option label="Acura" value="Acura" selected="selected">Acura</option>
+   <option label="Alfa Romeo" value="Alfa Romeo">Alfa Romeo</option>
+   <option label="AM General" value="AM General">AM General</option>
+   <option label="American Motors" value="American Motors">American Motors</option>
+   <option label="Aston Martin" value="Aston Martin">Aston Martin</option>
+   <option label="Audi" value="Audi">Audi</option>
+   <option label="Avanti" value="Avanti">Avanti</option>
+   <option label="Bentley" value="Bentley">Bentley</option>
+   <option label="Bertone" value="Bertone">Bertone</option>
+   <option label="BMW" value="BMW">BMW</option>
+   <option label="Buick" value="Buick">Buick</option>
+   <option label="Cadillac" value="Cadillac">Cadillac</option>
+   <option label="Checker" value="Checker">Checker</option>
+   <option label="Chevrolet" value="Chevrolet">Chevrolet</option>
+   <option label="Chrysler" value="Chrysler">Chrysler</option>
+   <option label="Coda" value="Coda">Coda</option>
+   <option label="Daewoo" value="Daewoo">Daewoo</option>
+   <option label="Daihatsu" value="Daihatsu">Daihatsu</option>
+   <option label="DeLorean" value="DeLorean">DeLorean</option>
+   <option label="Dodge" value="Dodge">Dodge</option>
+   <option label="Eagle" value="Eagle">Eagle</option>
+   <option label="Ferrari" value="Ferrari">Ferrari</option>
+   <option label="Fiat" value="Fiat">Fiat</option>
+   <option label="Fisker" value="Fisker">Fisker</option>
+   <option label="Ford" value="Ford">Ford</option>
+   <option label="Freightliner" value="Freightliner">Freightliner</option>
+   <option label="Genesis" value="Genesis">Genesis</option>
+   <option label="Geo" value="Geo">Geo</option>
+   <option label="GMC" value="GMC">GMC</option>
+   <option label="Honda" value="Honda">Honda</option>
+   <option label="Hummer" value="Hummer">Hummer</option>
+   <option label="Hyundai" value="Hyundai">Hyundai</option>
+   <option label="INEOS" value="INEOS">INEOS</option>
+   <option label="Infiniti" value="Infiniti">Infiniti</option>
+   <option label="International" value="International">International</option>
+   <option label="Isuzu" value="Isuzu">Isuzu</option>
+   <option label="Jaguar" value="Jaguar">Jaguar</option>
+   <option label="Jeep" value="Jeep">Jeep</option>
+   <option label="Karma" value="Karma">Karma</option>
+   <option label="Kia" value="Kia">Kia</option>
+   <option label="Lamborghini" value="Lamborghini">Lamborghini</option>
+   <option label="Lancia" value="Lancia">Lancia</option>
+   <option label="Land Rover" value="Land Rover">Land Rover</option>
+   <option label="Lexus" value="Lexus">Lexus</option>
+   <option label="Lincoln" value="Lincoln">Lincoln</option>
+   <option label="Lordstown Motors" value="Lordstown Motors">Lordstown Motors</option>
+   <option label="Lotus" value="Lotus">Lotus</option>
+   <option label="Lucid" value="Lucid">Lucid</option>
+   <option label="Maserati" value="Maserati">Maserati</option>
+   <option label="Maybach" value="Maybach">Maybach</option>
+   <option label="Mazda" value="Mazda">Mazda</option>
+   <option label="McLaren" value="McLaren">McLaren</option>
+   <option label="Mercedes-Benz" value="Mercedes-Benz">Mercedes-Benz</option>
+   <option label="Mercury" value="Mercury">Mercury</option>
+   <option label="Merkur" value="Merkur">Merkur</option>
+   <option label="MG" value="MG">MG</option>
+   <option label="Mini" value="Mini">Mini</option>
+   <option label="Mitsubishi" value="Mitsubishi">Mitsubishi</option>
+   <option label="Mobility Ventures" value="Mobility Ventures">Mobility Ventures</option>
+   <option label="Nissan" value="Nissan">Nissan</option>
+   <option label="Oldsmobile" value="Oldsmobile">Oldsmobile</option>
+   <option label="Panoz" value="Panoz">Panoz</option>
+   <option label="Peugeot" value="Peugeot">Peugeot</option>
+   <option label="Pininfarina" value="Pininfarina">Pininfarina</option>
+   <option label="Plymouth" value="Plymouth">Plymouth</option>
+   <option label="Polestar" value="Polestar">Polestar</option>
+   <option label="Pontiac" value="Pontiac">Pontiac</option>
+   <option label="Porsche" value="Porsche">Porsche</option>
+   <option label="RAM" value="RAM">RAM</option>
+   <option label="Renault" value="Renault">Renault</option>
+   <option label="Rivian" value="Rivian">Rivian</option>
+   <option label="Rolls-Royce" value="Rolls-Royce">Rolls-Royce</option>
+   <option label="Saab" value="Saab">Saab</option>
+   <option label="Saleen" value="Saleen">Saleen</option>
+   <option label="Saturn" value="Saturn">Saturn</option>
+   <option label="Scion" value="Scion">Scion</option>
+   <option label="Smart" value="Smart">Smart</option>
+   <option label="SRT" value="SRT">SRT</option>
+   <option label="Sterling" value="Sterling">Sterling</option>
+   <option label="Subaru" value="Subaru">Subaru</option>
+   <option label="Suzuki" value="Suzuki">Suzuki</option>
+   <option label="Tesla" value="Tesla">Tesla</option>
+   <option label="Toyota" value="Toyota">Toyota</option>
+   <option label="Triumph" value="Triumph">Triumph</option>
+   <option label="VinFast" value="VinFast">VinFast</option>
+   <option label="Volkswagen" value="Volkswagen">Volkswagen</option>
+   <option label="Volvo" value="Volvo">Volvo</option>
+   <option label="VPG" value="VPG">VPG</option>
+   <option label="Yugo" value="Yugo">Yugo</option>
+</select>
+<button
+   id="modalClose"
+   type="button"
+   class="btn blue"
+   ng-class="dealerStyling.Color"
+   data-dismiss="modal"
+   ng-click="resetResults()"
+>
+   Close
+</button>
+
+<a
+   href=""
+   class="close-btn pull-right blue"
+   data-dismiss="modal"
+   ng-class="dealerStyling.Color"
+   ng-click="resetResults(true)"
+   tabindex="-1"
+   ><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Close Modal</span></a
+>

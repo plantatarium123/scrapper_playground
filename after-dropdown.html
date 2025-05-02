@@ -1,0 +1,2629 @@
+<html lang="en" class="scrollbar" style="--kendo-scrollbar-width: 15px; --kendo-scrollbar-height: 15px;"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link href="_content/Powerlane.Blazor.Shared/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZXLPJ4P780&amp;l=dataLayer&amp;cx=c&amp;gtm=45He54g3v9171427966za200&amp;tag_exp=102803279~102813109~102887800~102926062~103027016~103051953~103055465~103077950~103106314~103106316"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/hbAq-YhJxOnlU-7cpgBoAJHb/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-0uUcqAX/lKvnfFMvCM7U5wcjfgBvv/1q+xxZKV6ZhBH4ikGcgTDEC4vEZPTt3l8O"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TZLN8K8Z"></script><script src="https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js"></script>
+    <script type="text/javascript">
+        var appInsights = new Microsoft.ApplicationInsights.ApplicationInsights({
+        config: {
+        connectionString: 'InstrumentationKey=bc8a2ad4-50a4-4e1b-8c6d-6da899f3c24c;IngestionEndpoint=https://centralus-3.in.applicationinsights.azure.com/;LiveEndpoint=https://centralus.livediagnostics.monitor.azure.com/;ApplicationId=13bf9b8f-e327-4f7f-993b-c6c5ee334d52,'
+        },
+        });
+        appInsights.loadAppInsights();
+    </script>
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css?v=QZTDNQ1IW640uEy_n46E8CqW22HgLPRfQBNkpZ1r9Ho" asp-append-version="true">
+    <link rel="stylesheet" href="_content/Powerlane.Blazor.Shared/font-awesome/css/all.css?v=NKTLTD9EfMr3WesyqZ2_fEngUi_zkuWS5pR8Vstpm9E" asp-append-version="true">
+    <link rel="stylesheet" href="_content/Powerlane.Blazor.Shared/css/site.css?v=SV-8pAKo8EubPbVqHFr0MiZKODC4qu2ML8oOJFY8dGc" asp-append-version="true">
+    <link rel="stylesheet" href="Powerlane.Blazor.Web.styles.css?v=EzXnE8_fs-15B00cdObQG0pbTZTE45wtAZukY_gbmdk" asp-append-version="true">
+    <link rel="stylesheet" href="css/tailwind.css?v=oZkDva0mC6zwOBwJb1AUt46EOSMdIqk-2X3AKodyGuU" asp-append-version="true">
+    <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js?v=ITaQSsBTBmdJoUpPr2KiZ7JwhfKjwa7SGa6zvlv9kkU" asp-append-version="true"></script><script>
+        (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TZLN8K8Z');
+    </script>
+    
+    <script src="_content/Powerlane.Blazor.Shared/js/site.js?v=vAJDY5TO-d1xvgqzdf28ADLPExfnRq0g-G28G0Nc8ik" asp-append-version="true"></script>
+    <script src="_content/Powerlane.Blazor.Shared/js/Captcha.js?v=svb7zsoUouuBesFbM0Eim-CFqbMQxl4XkVvmi233hYY" asp-append-version="true"></script>
+    <script src="_content/Powerlane.Blazor.Shared/js/js-cloudimage-360-view.js?v=zgUjTiaxtT7XjiXIDes1TKIzX5UtcnL2YYQN-Umfq8E" asp-append-version="true"></script><style type="text/css">.cloudimage-360-icons-container {
+  position: absolute;
+  display: flex;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 95%;
+  flex-direction: column;
+  align-items: center;
+  z-index: 101;
+}
+
+.cloudimage-360-magnifier-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: url('https://scaleflex.cloudimg.io/v7/filerobot/js-cloudimage-360-view/loupe.svg') 50% 50% / cover no-repeat;
+}
+
+.cloudimage-360-fullscreen-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: url('https://scaleflex.cloudimg.io/v7/filerobot/js-cloudimage-360-view/full_screen.svg') 50% 50% / cover no-repeat;
+}
+
+.cloudimage-360-reset-zoom-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-top: auto;
+  cursor: pointer;
+  background: url('https://scaleflex.cloudimg.io/v7/filerobot/js-cloudimage-360-view/ic-resize.svg?vh=248986') 50% 50% / cover no-repeat;
+}
+
+.cloudimage-360-close-fullscreen-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: url('https://scaleflex.cloudimg.io/v7/filerobot/js-cloudimage-360-view/cross.svg') 50% 50% / cover no-repeat;
+}
+
+.cloudimage-360-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  height: 8px;
+  background-color: rgb(165, 175, 184);
+  z-index: 100;
+}
+
+.cloudimage-360-box-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.cloudimage-360-view-360-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 4px;
+  transition: 0.5s all;
+  color: rgb(80, 80, 80);
+  text-align: center;
+  line-height: 100px;
+  z-index: 2;
+}
+
+.cloudimage-360-view-360-circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  pointer-events: none;
+  user-select: none;
+  transition: 0.5s all;
+  z-index: 2;
+}
+
+.cloudimage-360-fullscreen-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #FFF;
+}
+
+.cloudimage-360-img-magnifier-glass {
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: wait;
+  line-height: 200px;
+  text-align: center;
+  z-index: 1000;
+  width: 250px;
+  height: 250px;
+  top: -75px;
+  right: -85px;
+}
+
+.cloudimage-360 .cloudimage-360-left,
+.cloudimage-360 .cloudimage-360-right {
+  padding: 8px;
+  background: rgb(244, 244, 244);
+  border: none;
+  border-radius: 4px;
+}
+
+.cloudimage-360 .cloudimage-360-left:focus,
+.cloudimage-360 .cloudimage-360-right:focus {
+  outline: none;
+}
+
+.cloudimage-360 .cloudimage-360-left {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: calc(50% - 15px);
+  left: 20px;
+}
+
+.cloudimage-360 .cloudimage-360-right {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: calc(50% - 15px);
+  right: 20px;
+}
+
+.cloudimage-360 .cloudimage-360-left:before,
+.cloudimage-360 .cloudimage-360-right:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: 50% 50% / cover no-repeat;
+}
+
+.cloudimage-360 .cloudimage-360-left:before {
+  background-image: url('https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/assets/img/arrow-left.svg');
+}
+
+.cloudimage-360 .cloudimage-360-right:before {
+  background-image: url('https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/assets/img/arrow-right.svg');
+}
+
+.cloudimage-360 .cloudimage-360-left.not-active,
+.cloudimage-360 .cloudimage-360-right.not-active {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.cloudimage-360 .cloudimage-360-top,
+.cloudimage-360 .cloudimage-360-bottom {
+  padding: 8px;
+  background: rgb(244, 244, 244);
+  border: none;
+  border-radius: 4px;
+}
+
+.cloudimage-360 .cloudimage-360-top:focus,
+.cloudimage-360 .cloudimage-360-bottom:focus {
+  outline: none;
+}
+
+.cloudimage-360 .cloudimage-360-top {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  left: calc(50% - 15px);
+  top: 20px;
+  transform: rotate(90deg);
+}
+
+.cloudimage-360 .cloudimage-360-bottom {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  left: calc(50% - 15px);
+  bottom: 20px;
+  transform: rotate(90deg);
+}
+
+.cloudimage-360 .cloudimage-360-top:before,
+.cloudimage-360 .cloudimage-360-bottom:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: 50% 50% / cover no-repeat;
+}
+
+.cloudimage-360 .cloudimage-360-top:before {
+  background-image: url('https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/assets/img/arrow-left.svg');
+}
+
+.cloudimage-360 .cloudimage-360-bottom:before {
+  background-image: url('https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/assets/img/arrow-right.svg');
+}
+
+.cloudimage-360 .cloudimage-360-top.not-active,
+.cloudimage-360 .cloudimage-360-bottom.not-active {
+  opacity: 0.4;
+  cursor: default;
+}</style><style type="text/css">.cloudimage-360-hotspot-link-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(12, 109, 199, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: opacity 600ms ease-in-out;
+  cursor: auto;
+}
+
+.cloudimage-360-hotspot-link-icon::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/assets/img/link-hotspot.svg');
+  background-color: #0C6DC7;
+  background-repeat: no-repeat;
+  background-size: 17px 7px;
+  background-position: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+	animation: pulse 2s infinite;
+  cursor: auto;
+}
+
+.cloudimage-360-hotspot-custom-icon {
+  width: 42px;
+  height: 42px;
+  background: #76AD0133;
+  border: 1px solid #FFFFFF33;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: opacity 300ms ease-in-out;
+  cursor: auto;
+}
+
+.cloudimage-360-hotspot-custom-icon::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/assets/img/plus.svg');
+  background-color: #76AD01;
+  background-repeat: no-repeat;
+  background-size: 17px 7px;
+  background-position: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+	animation: pulse 2s infinite;
+  cursor: auto;
+}
+
+.cloudimage-360-hotspot-popup {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #FFFFFF;
+  padding: 6px;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  z-index: 999;
+}
+
+.cloudimage-360-hotspot-popup[data-show] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cloudimage-360-popup-arrow,
+.cloudimage-360-popup-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  cursor: 'auto';
+}
+
+.cloudimage-360-popup-arrow {
+  visibility: hidden;
+}
+
+.cloudimage-360-popup-arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.cloudimage-360-hotspot-popup[data-popper-placement^='top']
+  > .cloudimage-360-popup-arrow {
+  bottom: -4px;
+}
+
+.cloudimage-360-hotspot-popup[data-popper-placement^='bottom']
+  > .cloudimage-360-popup-arrow {
+  top: -4px;
+}
+
+.cloudimage-360-hotspot-popup[data-popper-placement^='left']
+  > .cloudimage-360-popup-arrow {
+  right: -4px;
+}
+
+.cloudimage-360-hotspot-popup[data-popper-placement^='right']
+  > .cloudimage-360-popup-arrow {
+  left: -4px;
+}
+
+.cloudimage-360-modal-wrapper {
+  max-width: 222px;
+}
+
+.cloudimage-360-images-carousel-wrapper {
+  margin: 0 auto;
+}
+
+.cloudimage-360-images-carousel {
+  background-color: #f5f4f4;
+  border-radius: 2px;
+}
+
+.cloudimage-360-images-carousel .cloudimage-360-carousel-image {
+  display: none;
+  object-fit: contain;
+  min-height: 187px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cloudimage-360-images-carousel .cloudimage-360-carousel-image.active-image {
+  display: block;
+  animation-name: fade-active-image;
+  animation-duration: 1.5s;
+}
+
+.cloudimage-360-carousel-dots {
+  display: flex;
+  column-gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5px auto;
+  row-gap: 3px;
+  padding: 0 6px;
+  width: 50%;
+}
+
+.cloudimage-360-carousel-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #C9D0DE;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+  border: 0;
+  padding: 0;
+}
+
+.cloudimage-360-carousel-dot.active-dot {
+  background-color: #76AD01;
+}
+
+.cloudimage-360-carousel-dot:focus,
+.cloudimage-360-carousel-dot:focus-visible {
+  border: 0;
+  outline: 0;
+}
+
+.cloudimage-360-modal-title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  margin: 4px 0;
+}
+
+.cloudimage-360-modal-description {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 4px 0;
+}
+
+.cloudimage-360-modal-more-details {
+  color: #76AD01;
+  background-color: #ECFAE6;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  padding: 4px 8px;
+  transition: background-color 200ms ease-in-out;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.cloudimage-360-modal-more-details:hover {
+  color: #76AD01;
+  background-color: #e1f5d8;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(99, 99, 99, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba(99, 99, 99, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(99, 99, 99, 0);
+	}
+}
+
+@keyframes fade-active-image {
+  from { opacity: 0.7 }
+  to { opacity: 1 }
+}</style>
+    <script src="_content/Powerlane.Blazor.Shared/js/usvGTM.js?v=2mx3zFyDz7B39P1AR0BcwUF5fo7GbbT-LOXXZtHKi24" asp-append-version="true"></script>
+    <script src="_content/Blazor-Analytics/blazor-analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZXLPJ4P780"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TZLN8K8Z"></script></head>
+<body class="scrollbar"><!--!--><!--!--><!--!--><!--!-->
+    <!--!--><!--!--><!--!-->
+
+<!--!-->
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+<!--!--><!--!--><!--!--><!--!-->
+            <div class="h-full flex flex-col"><div id="siteHeader" class="flex flex-wrap site-shadow"><div class="bg-darkblue h-6 flex flex-[0_0_100%] justify-between screen1280:justify-center order-1 navheader-height"><div class="flex flex-[0_1_80px] screen412:flex-initial justify-center "><!--!--><div class="h-full hidden screen412:flex  screen768:flex screen768:flex-auto screen768:justify-center screen1024:flex screen1024:flex-auto screen1024:justify-center"><!--!--><div class="my-auto flex flex-auto justify-center bg-darkblue  ml-4"><!--!--><i class="my-auto far fa-stopwatch text-[20px] text-white pr-2"></i>
+            <div class="text-left my-auto"><p class="body-small-regular text-white whitespace-nowrap"><!--!--><span class="hidden screen601:inline-block">Order Countdown</span>
+                    <span class="body-medium-bold text-white screen601:pl-2">06h 41m</span></p></div></div></div><div class="h-full grow flex screen412:flex-none screen412:hidden  screen768:flex-none screen768:hidden  bg-darkblue screen1024:hidden"><i class="m-auto ml-4 far fa-stopwatch text-[24px] text-white cursor-pointer"></i></div><!--!--><div class="k-drawer-container k-drawer-overlay headerdrawer countdowndrawer"><!--!-->
+<!--!-->
+    <div class="k-drawer telerik-blazor k-drawer-end" data-id="51e20af0-f54e-4ec9-aa58-6dbdb14e07f7" dir="ltr"><!--!-->
+
+        <!--!--><!--!-->
+
+        <div class="k-drawer-wrapper" style="width: 0; transition-duration: 0ms;"><!--!-->
+        </div><!--!-->
+    </div><!--!-->
+    <div class="k-drawer-content"><!--!-->
+    </div><!--!-->
+</div></div><!--!--><p class="body-medium-bold text-white my-auto px-2 screen1366:px-4">|</p><div class="flex flex-[0_1_80px] screen412:flex-initial"><!--!--><div class="h-full hidden screen412:flex  screen768:flex screen768:flex-auto screen768:justify-start screen1024:flex screen1024:flex-auto screen1024:justify-start"><!--!--><div class="h-full min-w-max flex justify-center screen768:px-2 screen1024:px-0  "><!--!--><!--!--><i class="text-[20px] font-bold text-white my-auto fas fa-truck hidden screen412:flex screen1024:inline-block"></i><!--!--><div class="my-auto pl-2 hidden screen412:flex"><p class="body-medium-regular font-bold screen601:font-normal text-white hidden screen601:block">Next Delivery </p>
+                            <p class="body-medium-regular font-normal screen601:font-bold text-white screen601:pl-2">No Deliveries En Route</p></div></div></div><div class="h-full grow flex screen412:flex-none screen412:hidden  screen768:flex-none screen768:hidden  bg-darkblue screen1024:hidden"><i class="m-auto fas fa-truck text-[24px] font-bold text-white cursor-pointer"></i></div><!--!--><div class="k-drawer-container k-drawer-overlay headerdrawer deliverydrawer"><!--!-->
+<!--!-->
+    <div class="k-drawer telerik-blazor k-drawer-end" data-id="cd76ce64-5bf5-401f-bc3e-963d8a57b4e6" dir="ltr"><!--!-->
+
+        <!--!--><!--!-->
+
+        <div class="k-drawer-wrapper" style="width: 0; transition-duration: 0ms;"><!--!-->
+        </div><!--!-->
+    </div><!--!-->
+    <div class="k-drawer-content"><!--!-->
+    </div><!--!-->
+</div></div><!--!-->
+                                <!--!--><p class="body-medium-bold text-white my-auto px-2 screen1366:px-4">|</p><!--!--><div class="flex flex-[0_1_80px] screen412:flex-initial screen1024:flex-initial"><!--!--><div class="h-full hidden screen412:hidden  screen768:flex screen768:flex-auto screen768:justify-start screen1024:flex screen1024:flex-auto screen1024:justify-start"><!--!--><!--!--><i class="my-auto px-3 screen768:pl-1 screen768:pr-2 fas fa-phone body-medium-bold text-white screen1024:hidden"></i>
+<div class="flex flex-col screen1024:flex-row flex-auto justify-center body-medium-bold screen768:body-small-bold screen1024:body-medium-regular text-white screen768:mr-4 screen1366:mr-5 screen1024:items-center"><p class="screen768:inline-block whitespace-nowrap"><span class="hidden screen1024:inline-block">Customer </span><!--!-->
+        <span class="screen1024:hidden font-normal">Cust. </span><!--!-->
+        Service: 800-490-4901</p><!--!-->
+    <!--!--><p class="hidden screen1024:inline-block px-2 screen1366:px-4">|</p>
+    <p class="hidden screen1024:inline-block   whitespace-nowrap"><!--!-->
+        Rep: Alex Gonzalez<!--!-->&nbsp;
+<a href="tel:3128591836)">312-859-1836</a></p></div></div><div class="h-full grow flex  screen768:flex-none screen768:hidden  bg-darkblue screen1024:hidden"><i class="m-auto mr-4 fas fa-phone text-[24px] font-bold text-white cursor-pointer"></i></div><!--!--><div class="k-drawer-container k-drawer-overlay headerdrawer contactdrawer"><!--!-->
+<!--!-->
+    <div class="k-drawer telerik-blazor k-drawer-end" data-id="b0f50828-d30d-4b56-839b-f34eb1e4525e" dir="ltr"><!--!-->
+
+        <!--!--><!--!-->
+
+        <div class="k-drawer-wrapper" style="width: 0; transition-duration: 0ms;"><!--!-->
+        </div><!--!-->
+    </div><!--!-->
+    <div class="k-drawer-content"><!--!-->
+    </div><!--!-->
+</div></div></div><!--!-->
+
+                    <div class="flex flex-wrap screen1024:flex-nowrap flex-[0_0_100%] order-2 justify-between screen1024:justify-start screen1024:gap-x-6 gap-y-4 pt-4 pb-2 screen1024:pb-6"><div class="flex flex-[0_1_28px] screen768:flex-initial order-1 "><!--!--><div class="h-full hidden screen412:hidden  screen768:flex screen768:flex-auto screen768:justify-center screen1024:flex screen1024:flex-auto screen1024:justify-start"><!--!--><div class=" flex flex-col gap-y-1 justify-center screen768:ml-4 screen1366:ml-8"><button class="text-left w-fit  px-0  btn-text-darkblue body-medium-bold leading-none">NORRIS TIRE CHAMPAIGN<!--!-->
+            <i class="pl-3 fas fa-caret-right "></i></button><button class="text-left w-fit px-0 btn-text-darkblue body-xsmall-regular leading-none">Derek Dimke<!--!-->
+        <i class="pl-3 fas fa-caret-right font-bold "></i></button></div><!--!--><!--!--></div><div class="h-full grow flex  screen768:flex-none screen768:hidden  bg-transparent screen1024:hidden"><i class="m-auto fas fa-circle-user text-[28px] font-bold text-darkblue  cursor-pointer ml-4"></i></div><!--!--><div class="k-drawer-container k-drawer-overlay headerdrawer userdrawer"><!--!-->
+<!--!-->
+    <div class="k-drawer telerik-blazor k-drawer-start" data-id="ca70c31d-f29a-4d70-af78-81f4eb5c938a" dir="ltr"><!--!-->
+
+        <!--!--><!--!-->
+
+        <div class="k-drawer-wrapper" style="width: 0; transition-duration: 0ms;"><!--!-->
+        </div><!--!-->
+    </div><!--!-->
+    <div class="k-drawer-content"><!--!-->
+    </div><!--!-->
+</div></div><!--!-->
+                        <div class="flex flex-initial screen1024:flex-auto screen1024:max-w-[200px] screen1366:max-w-[346px] screen1024:justify-center items-center order-2"><img class="!h-[32px] !max-h-[32px]  m-auto cursor-pointer" src="https://usvpltsa1prd2sharedasa01.blob.core.windows.net/powerlaneimages/Dealer-53616-Logo.JPG?2022-07-14T15:13:50" onerror="this.src = 'https://usafa1prdshopp1cdnfdep01-dsb2c3b8ezd9e8gy.a03.azurefd.net/images/USAF_USVco_text_CMYK.svg'" alt="Dealer Logo"></div><!--!-->
+                        <div class="flex flex-initial screen1024:flex-initial items-center order-3 screen1024:order-4 pr-4 screen1024:pr-6 "><img class="!h-[32px] !max-h-[32px] ml-auto my-auto cursor-pointer" src="https://usafa1prdshopp1cdnfdep01-dsb2c3b8ezd9e8gy.a03.azurefd.net/images/USAF_USVco_text_CMYK.svg" alt="USAutoForce Logo"></div><!--!-->
+                        <div class="relative flex flex-[0_0_100%] screen1024:flex-auto items-center order-last screen1024:order-3 px-3 screen1024:px-4 screen1366:px-8"><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><div class="hidden screen1366:flex"></div>
+<div id="divSmartSearch" class="screen1024:relative flex flex-auto bg-white border rounded h-8 screen1024:max-w-[550px]"><!--!--><div class="input-wrapper border-0 bg-transparent flex-auto" tabindex="0"><!--!--><i class="pl-4 text-sm fas fa-search font-bold"></i>
+                    <!--!--><span class="k-textbox k-input flex input-text h-full bg-transparent telerik-blazor k-input-solid k-rounded-md k-input-md"><!--!-->
+    <input role="textbox" placeholder="Search Tire Size, Vehicle, Part Number, Interchange, etc." id="SmartSearchAutoComplete" data-val-id="SmartSearchAutoComplete" data-id="7e7e40a7-16e0-4d5e-b485-d2952f84c825" class="k-input-inner" dir="ltr" aria-readonly="false" autocomplete="off" tabindex="0"><!--!-->
+</span></div></div></div></div><!--!-->
+
+                    <div class="flex flex-[0_0_100%] order-3 navheader-height bg-darkblue site-shadow"><!--!--><!--!--><!--!--><div class="flex flex-auto"><!--!--><div class="hidden screen1024:flex screen1024:flex-auto screen1024:justify-center items-center"><!--!--><!--!--><ul id="nav" class="w-full screen1024:flex screen1024:justify-between  screen1024:mx-4 screen1366:mx-8"><li class="screen1366:px-4 bg-white"><a id="navHome" class="p-2 btn-text-darkblue" onmousedown="GTM_StartTrackingPageLoad('/Home/Index', 'HomeLoad', '#home');">Home</a></li><li class="screen1366:px-4"><a id="navShoppingList" class="p-2 btn-text-white !font-normal hover:underline" onmousedown="GTM_StartTrackingPageLoad('/MyShoppingLists', 'ShoppingListLoad', '#shoppingListResult');">Lists</a></li><li tabindex="0" class="screen1366:px-4"><div class="flex"><a id="navQuotes" class="p-2 btn-text-white !font-normal hover:underline"><!--!-->
+                        Quotes
+                        <i class="text-center min-w-[12px] fa fa-caret-right"></i></a><!--!--><span class="mx-1 bg-yellow text-2xs !font-black rounded-full w-5 h-5 text-darkblue flex my-auto"><span class="m-auto">!</span></span></div><!--!-->
+                <div id="navQuotesDropDown" class="p-3 screen1366:-ml-4 flex flex-col text-left bg-white  screen1024:rounded-b  site-shadow
+            hidden"><div class="flex justify-between"><a id="navQuoteHistory" class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Quote/QuoteHistory', 'QuoteHistoryLoad', '#quoteHistoryResults');"><!--!-->
+                            Quote History
+                        </a></div><!--!-->
+                    <div class="flex justify-between"><a id="navPendingPurchases" class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Quote/PendingPurchases', 'PendingPurchasesLoad', '#pendingOrderResults');"><!--!-->
+                            Pending Purchases
+                        </a><span class="mx-1 bg-yellow text-2xs !font-black rounded py-0.5 px-1 text-darkblue flex my-auto"><p class="m-auto">24</p></span></div></div></li><li class="screen1366:px-4"><div class="flex"><a id="navStockOrders" onmousedown="GTM_StartTrackingPageLoad('/StockOrders', 'StockOrdersLoad', '#stockOrderResult');" class="p-2 btn-text-white !font-normal hover:underline"><!--!-->
+                        Stock Order
+                    </a></div></li><li tabindex="0" class="screen1366:px-4"><a id="navOrders" class="p-2 btn-text-white !font-normal hover:underline"><!--!-->
+                    Orders
+                    <i class="text-center min-w-[12px] fa fa-caret-right"></i></a><!--!-->
+                <div id="navOrdersDropDown" class="p-3 screen1366:-ml-4 flex flex-col text-left bg-white  screen1024:rounded-b  site-shadow
+            hidden"><a id="navOrdersHistoryLink" onmousedown="GTM_StartTrackingPageLoad('/Order/OrderHistory', 'OrderHistoryLoad', '#orderHistoryResults');" class="btn-text-slate !font-normal hover:underline my-1"><!--!-->
+                        Order History
+                    </a><!--!-->
+                    <!--!--><a id="navBackOrders" class="btn-text-slate !font-normal hover:underline my-1" href="/PassThrough/BackOrders" target="_blank">
+                        Manage Backorders
+                    </a></div></li><!--!--><li class="screen1366:px-4"><a class="p-2 btn-text-white !font-normal hover:underline"><!--!-->
+                        Tire Warranties
+                    </a></li><li class="screen1366:px-4" tabindex="0"><a class="p-2 btn-text-white !font-normal hover:underline"><!--!-->
+                    Resources
+                    <i class="text-center fa fa-caret-right"></i></a><!--!-->
+
+                <div class="p-3 screen1366:-ml-4 text-left bg-white grid grid-cols-1 screen1024:grid-cols-2 gap-x-4 screen1024:gap-x-10 screen1024:rounded-b site-shadow hidden"><!--!--><a class="btn-text-slate !font-normal hover:underline my-1 text-left" href="/PassThrough/InvoiceCopies" target="_blank">View Invoice Copies</a>
+                            <!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="/Passthrough/PriceFileCreation" target="_blank">Price File Creation</a>
+                            <!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="/Passthrough/OnlineStatements" target="_blank">View Statement</a><!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="https://www.termsync.com/invoiceassist/usventure" target="_blank">Pay Online – NEW</a><!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="/PassThrough/Returns" target="_blank">Online Returns</a><!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="/PassThrough/PrintableClaimForms" target="_blank">Returns Claim Form</a><!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="/PassThrough/CreateDealerPromotions" target="_blank">Create Dealer Promotions</a><!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="/PassThrough/WarrantyReturnInfo" target="_blank">Warranty Return Info</a><a class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Rebates/ActiveRebates', 'ActiveRebatesLoad', '#rebatePromotionsResults');"><!--!-->Promotions &amp; Rebates</a><a class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Resources/LubricantResourceCenter', 'LubricantResourcesLoad', '#lubricantResourcesResults');">Lubricants Resource Center</a><!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="http://Tireoneonlinestore.com" target="_blank">Tire One Online Store</a><!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="/PassThrough/DOT_MSDS_Sheets" target="_blank">DOT/MSDS Sheets</a><a class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Resources/TireResourceCenter', 'TireResourceCenterLoad', '#tireResourcesResults');">Tire Resource Center</a><!--!-->
+
+                    <!--!--><a class="btn-text-slate !font-normal hover:underline my-1" href="https://oneplatform.usautoforce.com/warehousehours/index" target="_blank">Warehouse Information</a>
+
+                    <a class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Resources/SalesTools', 'SalesToolsLoad', '#salesToolsResults');">Sales Tools</a></div></li><li tabindex="0" class="screen1366:px-4"><a class="p-2 btn-text-white !font-normal hover:underline"><!--!-->
+                    Settings
+                    <i class="text-center min-w-[12px] fa fa-caret-right"></i></a><!--!-->
+                <div id="navSettingsDropDown" class="p-3 screen1366:-ml-4 flex flex-col text-left bg-white  screen1024:rounded-b  site-shadow
+                    hidden"><a id="navGeneralSetup" class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Settings', 'GeneralSetupLoad', '#generalSetupResults');"><!--!-->
+                            General Setup
+                        </a><div class="flex justify-between"><a id="navUsers" class="btn-text-slate !font-normal hover:underline my-1" onmousedown="GTM_StartTrackingPageLoad('/Settings/Users', 'UsersLoad', '#usersResults');"><!--!-->
+                                Users
+                            </a></div></div></li></ul></div><!--!-->
+
+<div class="flex screen1024:hidden items-center"><i class="text-xl text-white my-auto py-1 px-4 fas fa-bars"></i><!--!-->
+    <p class="subtitle-large-bold cursor-pointer text-white">MENU</p></div><!--!-->
+
+<div class="drawer-overlay nav bg-transparent hidden" tabindex="0" style="top: 118px; max-height: 982px;"></div><!--!-->
+
+<!--!--><div class="k-animation-container telerik-blazor navdrawer" data-id="116e843e-2479-4ef8-89f3-b42ae4426cc8" style="top: 118px; max-height: 982px; display: none;"><!--!-->
+    <!--!--><div data-id="cbdd2b46-e594-4583-9a47-85b33bcb4b50" style="transition-delay: 20ms;transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+</div></div><!--!-->
+                            <div class="flex flex-initial"><!--!--><!--!--><div class="h-full w-full flex items-center justify-between gap-x-8"><button class=""><!--!--><i class="text-white fas fa-shopping-cart"></i></button><button id="btnCartCheckout" class="btn-darkblue !bg-yellow !text-darkblue body-medium-bold-tight px-5 mr-4 screen1024:mr-5 " onmousedown="GTM_StartTrackingPageLoad('/Checkout', 'CheckoutLoad', '#checkoutContent');">Checkout</button></div><div class="right-0 hidden mt-10 z-[10003] w-[260px] max-h-[75%] screen1024:max-h-[66%] bg-white rounded-l site-shadow border border-grey flex flex-col space-y-1 py-2"><!--!--><!--!--><p class="h5-regular text-center pt-4 pb-2">Your Cart is Empty</p></div></div></div><!--!-->
+
+                    <div class="flex flex-[0_0_100%] order-4"><!--!--><!--!--><!--!--><!--!--></div></div><!--!-->
+
+                <main id="main" class="bg-softgrey flex flex-auto flex-wrap screen1024:overflow-y-auto  scrollbar" onscroll="fixContainers();"><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><div class="drawer-overlay  bg-slate left hidden" tabindex="0" style="top: 158px; max-height: 942px;"></div><!--!-->
+
+    <!--!--><div class="k-animation-container telerik-blazor leftcoldrawer" data-id="5a1ecd4c-cc7f-472a-b15e-3dfaf6e7c7b1" style="top: 158px; max-height: 942px; display: none;"><!--!-->
+    <!--!--><div data-id="94275a5c-fc14-4043-8fc7-d5b1b9d0f49f" style="transition-delay: 20ms;transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+</div><!--!-->
+
+    <!--!--><!--!--><div class="drawer-overlay  bg-slate left hidden" tabindex="0"></div><!--!-->
+
+    <!--!--><div class="k-animation-container telerik-blazor customcoldrawer " data-id="6184e3e8-cd5d-4734-877b-b2caca96e99e" style="top: 158px; max-height: 942px; display: none;"><!--!-->
+    <!--!--><div data-id="8d15bf02-f519-4164-b7cf-5d0f96d8e3eb" style="transition-delay: 20ms;transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+</div><!--!-->
+
+<div class="flex flex-auto flex-col screen1280:flex-row max-w-full min-h-[calc(100%-40px)]"><div class="screen1280:hidden mx-4 mt-5 "><button class="btn-darkblue h-[50px] body-medium-bold">Search for Products</button></div><div class="overflow-y-auto scrollbar border-darkgrey hidden screen1280:flex screen1280:flex-[0_0_400px] screen1366:border-r"><div id="leftContainer" class="h-full w-full overflow-x-hidden scrollbar site-shadow py-4 fixed max-w-[400px] px-8" onscroll="fixLeftColumnContent();" style="top: 158px; max-height: 942px;"><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><div class="grid grid-cols-2 gap-2 mb-2"><button id="btnTiresCatalog" class="btn-darkblue h-10 px-0 !text-sm"><!--!-->
+                            Tires
+                        </button><button id="btnPartsCatalog" class="btn-softgrey border border-darkblue text-darkblue !font-normal bg-transparent h-10 px-0 !text-sm">Parts</button><button id="btnSuppliesCatalog" class="btn-softgrey border border-darkblue text-darkblue !font-normal bg-transparent h-10 px-0 !text-sm"><!--!-->
+                                Supplies
+                            </button><button id="btnWheelsTubesCatalog" class="btn-softgrey border border-darkblue text-darkblue !font-normal bg-transparent h-10 px-0 !text-sm"><!--!-->
+                                Wheels/Tubes
+                            </button></div><div id="search-input-container"><!--!--><div id="tireSearchPanel" class="grid grid-cols-1 gap-x-0 gap-y-2 block"><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tireSizePanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><label class="body-medium-bold whitespace-nowrap">Tire Size</label><!--!-->
+                    <!--!--><div class="relative w-full"><input id="tiresizeField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter"></div></div><button type="button" class="btn-text-grey text-slate  body-medium-regular  font-normal  my-2"><i class="text-darkblue fas fa-plus-circle"></i><!--!-->
+                    Add Rear Tire Size</button><!--!-->
+
+                <!--!--><div class="w-full h-auto  bg-white px-2 py-1.5 border border-darkgrey/50 rounded "><div id="tireBrandFilterPanel" class="flex justify-between hover:cursor-pointer " tabindex="0"><p class="body-xsmall-regular text-xs">Filter By Brand</p><i class="pr-1 body-medium-bold text-xs fad fa-filter "></i></div><div id="tireBrandFilterPanelContent" class="h-0 overflow-hidden"><!--!--><p class="mt-2 ml-4 body-xsmall-regular">*Stocking Strategy Brands</p>
+                        <div class="mt-1 flex flex-wrap leading-none"><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1057" data-val-id="1057" data-id="04cc4608-6e10-4adf-a1f2-52a2424d1995" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-bold leading-none my-auto" for="1057">Advanta<!--!-->*
+                                        </label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1081" data-val-id="1081" data-id="2c827ea2-d9a6-4813-b163-bf4238b0e985" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1081">Americus</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1" data-val-id="1" data-id="f3527615-2e98-41d7-a819-105597c5f6fd" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1">BFGoodrich</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1073" data-val-id="1073" data-id="43947a89-75b2-4271-a2cb-a526836a4a2a" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1073">BKT</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="2" data-val-id="2" data-id="eccee464-0dd5-4fe4-bbde-214f20c6d10f" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-bold leading-none my-auto" for="2">Bridgestone<!--!-->*
+                                        </label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1066" data-val-id="1066" data-id="aa732f3c-f43b-4089-8bdf-7c0455296909" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1066">Carlstar</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="3" data-val-id="3" data-id="ce9e7617-57f4-47b3-8a06-451ff8a814a6" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="3">Continental</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="4" data-val-id="4" data-id="ae27541f-eaf7-4b85-a20d-0becd2ab0540" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="4">Cooper</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1070" data-val-id="1070" data-id="ca766be5-4dfd-40f1-9781-38f37f739885" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1070">Countrywide</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1077" data-val-id="1077" data-id="fbbaf845-cfcc-460f-9824-6e387a04e4fc" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1077">Deestone</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1025" data-val-id="1025" data-id="7e6a74c5-c1ff-4738-9837-f1c573550b9f" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1025">Delta</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1129" data-val-id="1129" data-id="0c9dc816-e3ac-4e81-b783-7a8fa26196c5" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1129">Douglas</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="5" data-val-id="5" data-id="e6a43485-c5f0-4ebf-a6fa-4d2736769fa3" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="5">Dunlop</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1131" data-val-id="1131" data-id="7f0b53c4-8a51-4ce5-a1fb-d02a41292baa" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1131">Eurogrip</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="6" data-val-id="6" data-id="34b404f3-2cba-4f0d-a753-03c3191c80db" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="6">Falken</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="7" data-val-id="7" data-id="e3ec8562-464f-4263-87d1-76e8ca3038b5" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-bold leading-none my-auto" for="7">Firestone<!--!-->*
+                                        </label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1029" data-val-id="1029" data-id="ecb15993-2ee0-4269-97a6-4a18beacc968" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1029">Fuzion</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1059" data-val-id="1059" data-id="1c0ffdc5-1262-492f-a142-c81caf0392bc" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1059">Galaxy</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="8" data-val-id="8" data-id="ac94b58c-ae30-4542-b59a-5714910e00aa" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="8">General</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1086" data-val-id="1086" data-id="539eba05-7340-494e-8261-a909c1004f35" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1086">Gladiator</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="9" data-val-id="9" data-id="ab2dbe5a-1775-4ab4-94cb-09c52b6fdff0" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="9">Goodyear</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1058" data-val-id="1058" data-id="3faeae78-9b72-48b8-b63a-54bfae718adf" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1058">Greenball</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1122" data-val-id="1122" data-id="37f9bdee-7f21-4cbc-a12d-6e207f84620d" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1122">Groundspeed</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1087" data-val-id="1087" data-id="fd6605cc-b034-4290-b695-cd7733c018d8" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1087">GT Radial</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="10" data-val-id="10" data-id="7390a413-4258-44e1-bca7-ba7486e5ebac" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="10">Hankook</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1125" data-val-id="1125" data-id="7f6dfad3-5851-40e2-b6a0-b7306d81a7ad" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1125">Harvest King</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="11" data-val-id="11" data-id="ccc0170b-5da4-4927-add0-0205fffa998e" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="11">Kelly</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1033" data-val-id="1033" data-id="bb73c977-cfd2-40f6-9771-6c00dd875d0f" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1033">Kenda</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="12" data-val-id="12" data-id="ded59eef-42c0-4d74-887c-69a5b478e422" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="12">Kumho</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="13" data-val-id="13" data-id="3aad46ea-9a1c-4d9f-85aa-f66830c833f1" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="13">Mastercraft</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="14" data-val-id="14" data-id="c11bb11e-9e1b-4555-81e5-21cf70cf5cb4" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="14">Michelin</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1121" data-val-id="1121" data-id="10d00f3d-31ab-4261-9c72-37e96af08930" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1121">Mickey Thompson</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1075" data-val-id="1075" data-id="e1175004-5d16-4b2d-b8af-249566af77d1" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1075">Mitas</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1065" data-val-id="1065" data-id="a5347a83-c24c-43d9-a079-702a526d6745" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1065">Multi Mile</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1041" data-val-id="1041" data-id="f482f62e-98af-4dd1-90ef-6e10a1631e1a" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1041">Nexen</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1117" data-val-id="1117" data-id="f4e7751a-2e13-44ba-9358-d0be1c845e1e" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1117">Nitto</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1056" data-val-id="1056" data-id="ca9f09fc-a307-4226-a954-fb6f9f6092fd" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1056">Nokian</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1068" data-val-id="1068" data-id="3d0c4536-7ea1-4be0-ad60-4c822ae956df" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1068">Ohtsu</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="15" data-val-id="15" data-id="a64a4d29-39c6-4351-b14b-4b313ecbc329" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="15">Pirelli</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1124" data-val-id="1124" data-id="52c344d4-4f4d-4e51-a0ad-6063cd58bdcf" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1124">Power King</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1062" data-val-id="1062" data-id="8532626a-90a8-4ddf-8f33-872f72b101c7" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1062">Roadmaster</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1128" data-val-id="1128" data-id="4a2edddb-2087-41ae-8a2f-4b6a47e1e38a" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1128">Sailun</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1113" data-val-id="1113" data-id="be8d3dcd-a94c-42b6-959f-a4b2383f0399" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1113">Starfire</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1105" data-val-id="1105" data-id="722e37e3-625c-4b19-bb3c-29e581772381" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1105">Thunderer</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1120" data-val-id="1120" data-id="5ceb288c-1f42-4818-aa39-f5f52a5f5d60" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1120">Towmax</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="16" data-val-id="16" data-id="94b76b91-4e63-4920-b3a5-c18295affcbf" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="16">Toyo</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1127" data-val-id="1127" data-id="c2129fbe-ab56-43d7-bb1e-b6e92a170af6" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1127">Trailer King</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1060" data-val-id="1060" data-id="bf8b12a8-e161-45f7-b018-7a7bd6438980" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1060">Trelleborg</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="17" data-val-id="17" data-id="bef721bd-dfc9-4167-a72c-c727c91896d4" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="17">Uniroyal</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="1135" data-val-id="1135" data-id="b61759b3-0514-4d0c-8505-b23133e680e0" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="1135">VERCELLI</label></div><div class="flex min-w-[50%] max-w-[50%] pb-1 "><!--!--><span class="k-checkbox-wrap"><!--!-->
+    <input type="checkbox" id="18" data-val-id="18" data-id="92bdb11f-68f2-42d7-9214-dc893384f8b0" dir="ltr" class="k-checkbox my-auto telerik-blazor k-rounded-md k-checkbox-sm" aria-checked="false" tabindex="0"><!--!-->
+</span><label class="px-1 btn-text-slate text-[11px] font-normal leading-none my-auto" for="18">Yokohama</label></div></div><!--!-->
+                        <div class="flex justify-around"><button type="button" class=" btn-text-grey body-medium-regular">Clear Selection</button><!--!-->
+                            <button type="button" class=" btn-text-grey body-medium-regular">Save as Default</button></div></div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tirePartNumberPanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">Part Number</label>
+                    <!--!--><div class="relative w-full"><input id="tirepartField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter"></div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tireVinPanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">VIN</label>
+                    <!--!--><div class="relative w-full"><input id="tireVINField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter"></div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tireLicensePlatePanelContent" class="h-[auto]"><div class="flex flex-row flex-auto flex-wrap justify-between items-center gap-2"><!--!--><div class="flex flex-auto"><label class="body-medium-bold-tight whitespace-nowrap">License Plate</label></div>
+                    <div class="flex flex-auto items-center"><!--!--><div class="relative w-full"><input id="tirePlateField" type="text" class="input-text-sm min-w-[124px] max-w-[124px]" autocomplete="off"></div></div><!--!-->
+                    <div class="flex flex-initial"><!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist ddlflex-fix  min-w-[70px] max-w-[70px] k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="44ff1781-89a3-4abe-85c0-0f70cb1bd3e5" data-val-id="ddlTireState" tabindex="0" id="ddlTireState" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlTireState_selectId" aria-controls="3f87adfc-2671-4354-93bc-eba6b7130e5f" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlTireState_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+IL                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="bcccffcf-de33-4825-85c1-07c3e0327106" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+</div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tireVehiclePanel" class="flex justify-between hover:cursor-pointer " tabindex="0"><p class="!font-bold text-slate text-xs">Vehicle Year / Make / Model</p><i class="pr-1 fas fa-caret-right rotate-90 origin-top-right translate-y-4  transition "></i></div><div id="tireVehiclePanelContent" class="h-[auto]"><!--!--><p class="body-medium-regular hidden">Year</p><!--!-->
+    <!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mt-1 mb-1 open k-focus k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="1e4eabf0-3ccb-48ee-9ebe-e39d266839e7" tabindex="0" role="combobox" aria-expanded="true" aria-busy="false" aria-readonly="false" aria-describedby="80e0348e-1d13-484a-86db-82936686a9fd" aria-controls="58cdc071-9d0c-4317-9e25-34c3da50d5b9" aria-haspopup="listbox" aria-activedescendant="4cc66891-aac9-4429-8c15-84e680ce90f8"><!--!-->
+
+        <span class="k-input-inner" id="80e0348e-1d13-484a-86db-82936686a9fd"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Year                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="ee709012-a3aa-4019-b2f8-8efe92aa8270" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<p class="body-medium-regular hidden">Make</p><!--!-->
+    <!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mb-1  ddl-disabled k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="61c99d7a-36da-42c3-8506-40124aefc65e" tabindex="0" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="8fc98346-c778-4a67-b165-d2fac7ab6883" aria-controls="b431078a-5fa6-49d6-9836-737173433782" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="8fc98346-c778-4a67-b165-d2fac7ab6883"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Make                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="74e721d9-ee5d-4cc2-8f28-e4e71aad9f8e" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<p class="body-medium-regular hidden">Model</p><!--!-->
+    <!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mb-1  ddl-disabled k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="62afa4ad-3a0b-4eb0-a415-9dcc9b39bb2c" tabindex="0" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="02502fd2-3733-4097-9ae7-c916c1f3a053" aria-controls="f7c1a8a7-52b6-484b-868f-04ca70795edb" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="02502fd2-3733-4097-9ae7-c916c1f3a053"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Model                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="f53a1302-162d-4475-9121-ac18dc53a4de" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mb-1  ddl-disabled k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="5cc57c7c-69e7-43ed-8d4a-89cbc9a974ea" tabindex="0" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="d00660b9-806a-4962-a87f-ca8de2327426" aria-controls="a0c4a4a8-3c55-4792-816b-fa69459481af" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="d00660b9-806a-4962-a87f-ca8de2327426"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Trim                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="d274da14-c31a-4472-a392-2b8fcf7a63aa" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist  ddl-disabled k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="1ae475ec-76b0-475e-a9af-5a49c245ce2c" tabindex="0" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="86c5d6d2-8f8c-44ff-85da-4a42b56c4d56" aria-controls="5b919927-1d69-4499-8cfb-29bf1fdb98cb" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="86c5d6d2-8f8c-44ff-85da-4a42b56c4d56"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Size                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="994c8673-bc89-40ed-896c-8c4beaa52664" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+</div></div><div class="flex justify-around my-4"><!--!--><label class="my-auto body-medium-bold">Minimum Qty:</label>
+                <!--!--><div class="input-wrapper w-16"><input type="number" class="input-numeric-sm font-bold" min="0" step="1"><div class="flex flex-col flex-inital items-center justify-center"><i class="-mb-0.5 fas fa-caret-up  leading-none  px-1 text-xs"></i><!--!-->
+                <i class="-mt-0.5 fas fa-caret-down leading-none px-1 text-xs"></i></div></div></div><button id="btnTireSearch" class="btn-darkblue h3-bold h-[50px]" type="button" disabled=""><!--!-->
+                SEARCH
+            </button><button class="btn-text-slate !text-sm !font-normal" type="button" disabled=""><!--!-->
+                Clear Search
+            </button><!--!--><p class="body-medium-regular mt-6">More Search Options</p><!--!--><div id="brand&amp;treadpatternPanel" class="bg-white w-full h-10 p-2 border border-darkgrey/50 rounded hover:cursor-pointer site-shadow" tabindex="0"><div class="flex justify-between"><p class="!font-bold text-slate text-xs">Brand &amp; Tread Pattern</p></div></div><!--!--><div class="w-full h-auto  bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tireplussizingPanel" class="flex justify-between hover:cursor-pointer " tabindex="0"><p class="!font-bold text-slate text-xs">Tire Plus Sizing</p><i class="pr-1 fas fa-caret-right "></i></div><div id="tireplussizingPanelContent" class="h-0 overflow-hidden"><!--!--><div class="relative w-full"><!--!--><label class="mb-2 ml-2 body-xsmall-regular ">Enter Tire Size - Ex: 2055516</label>
+                    <div class="input-wrapper"><input id="tirePlusSizeField" type="text" class="input-text-sm" autocomplete="off"><!--!-->
+                        <i class="fas fa-hashtag"></i></div></div><!--!-->
+                <!--!--><label class="mb-2 ml-2 body-xsmall-regular ">Select Max Diameter % Variation</label>
+                <!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist ddlflex-fix  k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="45cb95a5-0b5e-4464-866e-1b038e9e5355" data-val-id="ddlPlusSizeDiameter" tabindex="0" id="ddlPlusSizeDiameter" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPlusSizeDiameter_selectId" aria-controls="d675461d-5e64-4d40-9a6d-a9459b8104fa" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPlusSizeDiameter_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+<!--!-->                        &nbsp;
+                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="2db1a5db-a8fa-4e1e-af4c-800228cfb121" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+                <!--!--><label class="mb-2 ml-2 body-xsmall-regular ">Select Max Section Width Variation</label>
+                <!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist ddlflex-fix  k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="1fd0d365-b196-4088-a4c6-15c822b4fd44" data-val-id="ddlPlusSizeWidth" tabindex="0" id="ddlPlusSizeWidth" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPlusSizeWidth_selectId" aria-controls="ac7930a6-ba8e-4c33-a43a-05dacec767c3" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPlusSizeWidth_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+<!--!-->                        &nbsp;
+                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="d0756d32-9ec9-4e4f-927f-5998718d412e" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+                <!--!--><label class="mb-2 ml-2 body-xsmall-regular ">Select Rim Size Greater Than Equal To</label>
+                <!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist ddlflex-fix  k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="2792b551-7a2a-4cfc-a090-ed70591abc84" data-val-id="ddlPlusSizeRim" tabindex="0" id="ddlPlusSizeRim" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPlusSizeRim_selectId" aria-controls="d9036283-db7c-4aca-94c0-f2c0b0f37fa9" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPlusSizeRim_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+<!--!-->                        &nbsp;
+                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="0e1d45e9-fd73-447d-89a6-0894b93ad6c3" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+</div></div></div><!--!-->
+
+<!--!--><!--!--><!--!--><!--!--><!--!-->
+
+<!--!--><!--!--><!--!--><div id="partsSearchPanel" class="grid grid-cols-1 gap-x-0 gap-y-2 hidden"><!--!--><!--!--><!--!--><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="partVehiclePanel" class="flex justify-between  " tabindex="0"><p class="!font-bold text-slate text-xs">Vehicle Year / Make / Model</p></div><div id="partVehiclePanelContent" class="h-[auto]"><!--!--><!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mt-1 mb-1  k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="03a51f66-116d-47ff-bb9e-781ac93743b2" data-val-id="ddlPartYear" tabindex="0" id="ddlPartYear" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPartYear_selectId" aria-controls="8d06aa92-9bad-4fde-b05b-0acf36defd84" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPartYear_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Year                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="19d63de8-b54e-4c1b-ad2e-eabd9672b54f" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mb-1  ddl-disabled k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="0734e3fc-18d7-4bc6-8b84-99a8d5eb1a34" data-val-id="ddlPartMake" tabindex="0" id="ddlPartMake" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPartMake_selectId" aria-controls="302c1881-2e3a-4846-9d8a-23234003893e" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPartMake_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Make                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="36c36d85-6efd-47f2-887f-3f0d262fb90f" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mb-1  ddl-disabled k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="2e1710fc-92b0-4c28-8196-83cde3ff015d" data-val-id="ddlPartModel" tabindex="0" id="ddlPartModel" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPartModel_selectId" aria-controls="a955f26e-edb0-45b1-86b8-6bf32691b4d3" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPartModel_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Model                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="457e6b18-ee39-47d0-9fa8-7d5a597a0d9b" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mb-1  ddl-disabled k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="63e4b512-fc73-4e04-8c46-45a8d12ab893" data-val-id="ddlPartEngine" tabindex="0" id="ddlPartEngine" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPartEngine_selectId" aria-controls="049b9f01-6ed1-472b-91de-e02403c16834" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPartEngine_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Engine                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="6c8b52c6-d6dd-4a39-9efe-3da7df82c549" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+</div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="partVinPanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">VIN</label>
+                    <!--!--><div class="relative w-full"><input type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter"></div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="partLicensePlatePanelContent" class="h-[auto]"><div class="flex flex-row flex-auto flex-wrap justify-between items-center gap-2"><!--!--><div class="flex flex-auto"><label class="body-medium-bold-tight whitespace-nowrap">License Plate</label></div>
+                    <div class="flex flex-auto items-center"><!--!--><div class="relative w-full"><input id="partPlateField" class="input-text-sm min-w-[124px] max-w-[124px]" autocomplete="off" type="text"></div></div><!--!-->
+                    <div class="flex flex-initial"><!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist ddlflex-fix min-w-[70px] max-w-[70px] k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="1da151d6-a1b5-4b5d-802c-93bc84ccd507" data-val-id="ddlPartState" tabindex="0" id="ddlPartState" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlPartState_selectId" aria-controls="6d540c68-5dab-4cd6-b477-2d999818aaf4" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlPartState_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+IL                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="14d6f6b4-88c7-4d90-a11d-c8ca3cf45213" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+</div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tirePartNumberPanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">Part Number</label>
+                    <!--!--><div class="relative w-full"><input id="partpartField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter"></div></div></div></div><!--!--><div class="my-2"></div><!--!--><div class="flex justify-around my-4"><!--!--><label class="my-auto body-small-bold">Minimum Qty:</label>
+                <!--!--><div class="input-wrapper w-16"><input type="number" class="input-numeric-sm font-bold" min="0" step="1"><div class="flex flex-col flex-inital items-center justify-center"><i class="-mb-0.5 fas fa-caret-up  leading-none  px-1 text-xs"></i><!--!-->
+                <i class="-mt-0.5 fas fa-caret-down leading-none px-1 text-xs"></i></div></div></div><button class="btn-darkblue h3-bold h-[50px]" type="button" disabled=""><!--!-->
+                SEARCH
+            </button><button class="btn-text-slate !text-sm !font-normal" type="button" disabled=""><!--!-->
+                Clear Search
+            </button></div><!--!--><div id="supplySearchPanel" class="grid grid-cols-1 gap-x-0 gap-y-2 hidden"><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="supplyPartNumberPanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">Part Number</label>
+                <!--!--><div class="relative w-full"><input id="supplypartField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter"></div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="supplyCategoryTypePanel" class="flex justify-between  " tabindex="0"><p class="!font-bold text-slate text-xs">Category &amp; Type</p></div><div id="supplyCategoryTypePanelContent" class="h-[auto]"><!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist mt-1 mb-2  k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="b4b07b74-4a19-44a9-823f-2dfbbdeefb35" data-val-id="ddlSupplyCategory" tabindex="0" id="ddlSupplyCategory" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlSupplyCategory_selectId" aria-controls="2a15273d-a43e-46c3-bb7c-6f0f3b6104d1" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlSupplyCategory_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Category                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="9df5017a-1fa7-4508-ae49-5bc2347e6ad4" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+            <!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+<!--!-->
+
+<!--!-->
+<span class="telerik-blazor k-dropdownlist  ddl-disabled mb-1 k-picker k-picker-solid k-picker-sm k-rounded-md" dir="ltr" data-id="d90795e9-c48b-437e-9129-905f85e24c8c" data-val-id="ddlSupplyType" tabindex="0" id="ddlSupplyType" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="ddlSupplyType_selectId" aria-controls="e1e1e301-495f-4b95-87d1-53959d828af1" aria-haspopup="listbox"><!--!-->
+
+        <span class="k-input-inner" id="ddlSupplyType_selectId"><!--!-->
+                <span class="k-input-value-text"><!--!-->
+Select Type                </span><!--!-->
+        </span><!--!-->
+<!--!-->
+    <!--!--><button class="telerik-blazor k-button k-input-button k-button-solid k-button-sm k-button-solid-base k-icon-button" data-id="a68cfc64-21ac-47b8-98e0-6c330013e403" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button"><!--!-->
+
+    <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="M256 352 128 160h256z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+
+</button><!--!-->
+</span><!--!-->
+
+    <!--!--><!--!-->
+        <!--!--><!--!--><!--!-->
+    <!--!-->
+</div></div><div class="flex justify-around mt-8 mb-4"><!--!--><label class="my-auto body-medium-bold">Minimum Qty:</label>
+            <!--!--><div class="input-wrapper w-16"><input type="number" class="input-numeric-sm font-bold" min="0" step="1"><div class="flex flex-col flex-inital items-center justify-center"><i class="-mb-0.5 fas fa-caret-up  leading-none  px-1 text-xs"></i><!--!-->
+                <i class="-mt-0.5 fas fa-caret-down leading-none px-1 text-xs"></i></div></div></div><button id="btnSupplySearch" class="btn-darkblue h3-bold h-[50px]" type="button" disabled=""><!--!-->
+            SEARCH
+        </button><button class="btn-text-slate !text-sm !font-normal" type="button" disabled=""><!--!-->
+            Clear Search
+        </button></div><!--!--><div id="wheelstubesSearchPanel" class="grid grid-cols-1 gap-x-0 gap-y-2 hidden"><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="wheelPanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">Wheels</label>
+                <!--!--><div class="relative w-full"><input id="wheelField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter" placeholder="Enter Rim Dia."></div></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="tubePanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">Tubes</label>
+                <!--!--><div class="relative w-full"><input id="tubeField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter" placeholder="Enter Rim Dia. Only"></div></div><!--!-->
+
+            <!--!--><div class="mt-2 mb-1 ml-[56px]"><p class="body-xsmall-regular">
+                    For combination tube sizes, enter the
+                    <b>LARGEST</b> rim diameter.
+                </p></div></div></div><!--!--><div class="w-full   bg-white px-2 py-1.5 border border-darkgrey/50 rounded site-shadow"><div id="wheeltubePartPanelContent" class="h-[auto]"><div class="flex flex-row flex-auto justify-between items-center gap-x-2"><!--!--><label class="body-medium-bold whitespace-nowrap">Part Number</label>
+                <!--!--><div class="relative w-full"><input id="wheeltubepartField" type="text" class="input-text-sm" autocomplete="off" enterkeyhint="enter"></div></div></div></div><div class="flex justify-around mt-8 mb-4"><!--!--><label class="my-auto body-medium-bold">Minimum Qty:</label>
+            <!--!--><div class="input-wrapper w-16"><input type="number" class="input-numeric-sm font-bold" min="0" step="1"><div class="flex flex-col flex-inital items-center justify-center"><i class="-mb-0.5 fas fa-caret-up  leading-none  px-1 text-xs"></i><!--!-->
+                <i class="-mt-0.5 fas fa-caret-down leading-none px-1 text-xs"></i></div></div></div><button id="btnWheelTubeSearch" class="btn-darkblue h3-bold h-[50px]" type="button" disabled=""><!--!-->
+            SEARCH
+        </button><button class="btn-text-slate !text-sm !font-normal" type="button" disabled=""><!--!-->
+            Clear Search
+        </button></div></div></div></div><div id="mainContainer" class="flex flex-auto  screen1280:flex-[0_0_calc(100%-400px)] scrollbar"><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><div class="flex flex-auto max-w-full flex-col"><div class="flex flex-[1_1_calc(100%-32px)] scrollbar p-2 screen1024:pr-3"><div id="home" class="flex flex-auto flex-col gap-y-4"><!--!--><div class="flex flex-col screen962:flex-row screen1024:flex-col screen1366:flex-row gap-x-4 gap-y-6 items-center justify-center mt-1.5 screen1366:mt-0"><div class="flex h-full "><!--!--><div class="flex w-full h-full min-w-full screen601:max-w-[513px]  screen601:max-h-[385px] screen768:max-w-[695px] screen962:max-w-[513px] screen962:min-w-[513px] screen1280:max-w-[695px] screen1280:min-w-[695px] screen1366:max-w-[513px] screen1366:min-w-[513px] screen1366:max-w-[513px]  screen1366:min-w-[513px] screen1536:max-w-[695px] screen1536:min-w-[695px]  " b-x9md676qs1=""><!--!--><div class="k-scrollview k-scrollview-light telerik-blazor" style="width: 100%; height: 100%;" dir="ltr" role="application" arai-roledescription="carousel" tabindex="0"><!--!-->
+    <div class="k-scrollview-wrap k-scrollview-animate" role="list" id="71ed16e2-8b5a-4737-89ab-903e1ee5e7a3" style="--kendo-scrollview-views: 10; --kendo-scrollview-current: 2;"><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GT25_MarApr_Stacked_RebateForm.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/large-GT25_MarApr_Counter-Card_StackedBanner.jpg" alt="General Tire Rebate" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="false"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GT25_MarApr_non-stacked_redemptionform(002).pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GeneralTire-March25-Landscape-webbanner.png" alt="General tire Rebate All dealers" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/Cooper_SpringRebateKit_RebateForm.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/large-GDY135465_25-NPP2USCooper_SpringRebateKit_Banner.jpg" alt="Cooper Spring 2025 Rebate" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/HK-2025-Spring-Rebate-Poster-19.5x25-2502-01.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/2025-Spring-Rebate-Site_Slider.jpg" alt="Hankook Spring 2025 Rebate" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GDY138615_25-NPP2_RebateForm_NonGYCC_7x9.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/Goodyear.jpg" alt="Goodyear Q2 rebates ALL" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GDY138615_25-TSN1_DigitalRebateForm_GYcom_10.875x9.375.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/large-GDY138615_25-TSN1_DigitalRebate_BANNER.jpg" alt="Goodyear Q2 G3x" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/6253_2025Q2USAFLoyaltyProgram.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/large-6253_2025Q2USAFLoyaltyProgramBanner.jpg" alt="Q2 Loyalty Program" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/6166_Q125_TireAccessories_April.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/large-6166_Q125_TireAccessories_AprilBANNER.jpg" alt="Tire Accesories" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/6243_Q225_Nexen_OrderPromo.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/large-6243_Q225_Nexen_OrderPromoBanner.jpg" alt="Nexen order promo" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+            <div class="k-scrollview-view" role="listitem" aria-hidden="true"><!--!-->
+                <a href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/6246_Q225_Kumho_AllWeather_EV-Promo.pdf" class="w-100" target="_blank" b-x9md676qs1=""><img class="h-full max-w-full w-full max-full rounded" src="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/large-6246_Q225_Kumho_AllWeather_EV-PromoV2.png" alt="Kumho All Weather and EV Promo USAF Direct" b-x9md676qs1=""></a><!--!-->
+            </div><!--!-->
+    </div><!--!-->
+    <div class="k-scrollview-elements"><!--!-->
+            <span class="k-scrollview-prev" aria-label="Previous" aria-controls="71ed16e2-8b5a-4737-89ab-903e1ee5e7a3" role="button"><!--!-->
+                <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-icon-xxxl k-icon k-svg-icon k-svg-i-chevron-left" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="m353.941 382.059-126.06-126.06 126.06-126.061L320 96 160 255.999 320 416z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+            </span><!--!-->
+            <span class="k-scrollview-next" aria-label="Next" aria-controls="71ed16e2-8b5a-4737-89ab-903e1ee5e7a3" role="button"><!--!-->
+                <!--!-->    <!--!--><!--!-->
+            <!--!--><span class="telerik-blazor k-icon-xxxl k-icon k-svg-icon k-svg-i-chevron-right" aria-hidden="true"><!--!-->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!-->
+            <!--!--><path d="m158.059 129.941 126.06 126.06-126.06 126.061L192 416l160-159.999L192 96z"></path><!--!-->
+        </svg><!--!-->
+<!--!-->
+</span><!--!-->
+    <!--!-->
+<!--!-->
+            </span><!--!-->
+<!--!-->
+            <div class="k-scrollview-nav-wrap"><!--!-->
+                <div class="k-scrollview-nav"><!--!-->
+                        <span role="button" aria-label="Item 0" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 1" aria-roledescription="slide" class="k-link k-primary"></span><!--!-->
+                        <span role="button" aria-label="Item 2" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 3" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 4" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 5" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 6" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 7" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 8" aria-roledescription="slide" class="k-link "></span><!--!-->
+                        <span role="button" aria-label="Item 9" aria-roledescription="slide" class="k-link "></span><!--!-->
+                </div><!--!-->
+            </div><!--!-->
+    </div><!--!-->
+    <div aria-live="polite" class="k-sr-only"></div>
+</div></div></div><!--!-->
+                                        <div class="flex w-full h-full"><!--!--><div class="flex w-full h-full  max-h-[calc(100%-20px)] min-h-[294px]" b-awu1hr16kr=""><!--!--><!--!-->
+<!--!--><!--!-->
+    <div class="k-tabstrip k-pos-relative telerik-blazor k-tabstrip-top flex flex-auto" data-id="caef375f-e10f-4871-b7ae-0b0f8ccaed50" dir="ltr" style=""><!--!-->
+
+        <!--!--><!--!-->
+
+        <div class="k-tabstrip-items-wrapper k-hstack"><!--!-->
+<!--!-->
+            <ul class="k-tabstrip-items k-reset" role="tablist"><!--!-->
+                <!--!-->    <li class="k-tabstrip-item k-item k-active k-tab-on-top   k-first" aria-controls="573674a8-6dbc-4f54-a6a0-6249a77b3037" aria-selected="true" role="tab" id="12d39a4d-862b-4404-b6f5-741a15d5518f" tabindex="0"><!--!-->
+            <span class="k-link"><!--!-->
+<!--!--><div class="tab" b-awu1hr16kr=""><p b-awu1hr16kr="">Consumer Rebates</p></div>            </span><!--!-->
+    </li><!--!-->
+<!--!-->
+            <!--!-->    <li class="k-tabstrip-item k-item k-state-default" aria-controls="573674a8-6dbc-4f54-a6a0-6249a77b3037" aria-selected="false" role="tab" id="80b37d87-7b94-413d-ba2b-53d66f791414" tabindex="-1"><!--!-->
+            <span class="k-link"><!--!-->
+<!--!--><div class="tab" b-awu1hr16kr=""><p b-awu1hr16kr="">Manufacturer Promotions</p></div>            </span><!--!-->
+    </li><!--!-->
+<!--!-->
+            <!--!-->    <li class="k-tabstrip-item k-item k-state-default    k-last" aria-controls="573674a8-6dbc-4f54-a6a0-6249a77b3037" aria-selected="false" role="tab" id="48f0b080-cc20-4e66-ba03-6233c63a3093" tabindex="-1"><!--!-->
+            <span class="k-link"><!--!-->
+<div class="tab" b-awu1hr16kr=""><div class="leading-none flex flex-wrap justify-center items-center gap-x-1" b-awu1hr16kr=""><img src="https://usafa1prdshopp1cdnfdep01-dsb2c3b8ezd9e8gy.a03.azurefd.net/images/usaf-logo.svg" alt="US AutoForce Promotions" b-awu1hr16kr=""><!--!-->
+                            <!--!--><p b-awu1hr16kr="">Promotions</p></div></div>            </span><!--!-->
+    </li><!--!-->
+<!--!-->
+            </ul><!--!-->
+
+        </div><!--!-->
+
+<!--!-->
+                    <!--!--><div class="k-tabstrip-content k-content k-active" role="tabpanel" aria-labelledby="12d39a4d-862b-4404-b6f5-741a15d5518f" aria-hidden="false" id="573674a8-6dbc-4f54-a6a0-6249a77b3037" tabindex="0" style="display: block;"><!--!-->
+<!--!--><div class="flex flex-auto flex-col gap-y-4 screen768:gap-y-5"><div class="grid  grid-cols-[calc(100%-136px)_136px] screen768:grid-cols-[67%_33%] screen1366:grid-cols-[calc(100%-136px)_136px] gap-x-2"><a class="btn-link-blue body-medium-regular max-w-full truncate" href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/Cooper_SpringRebateKit_RebateForm_10.88x8.38(2).pdf" target="_blank">Cooper Spring Rebate</a><!--!-->
+                <div class="flex justify-center flex-nowrap gap-x-1 body-medium-regular"><p>04/01/25</p><!--!-->
+                    <!--!--><p>-</p>
+                    <p>05/31/25</p></div></div><div class="grid  grid-cols-[calc(100%-136px)_136px] screen768:grid-cols-[67%_33%] screen1366:grid-cols-[calc(100%-136px)_136px] gap-x-2"><a class="btn-link-blue body-medium-regular max-w-full truncate" href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GT25_MarApr_Stacked_RebateForm.pdf" target="_blank">General Tire Spring Rebate</a><!--!-->
+                <div class="flex justify-center flex-nowrap gap-x-1 body-medium-regular"><p>03/01/25</p><!--!-->
+                    <!--!--><p>-</p>
+                    <p>04/30/25</p></div></div><div class="grid  grid-cols-[calc(100%-136px)_136px] screen768:grid-cols-[67%_33%] screen1366:grid-cols-[calc(100%-136px)_136px] gap-x-2"><a class="btn-link-blue body-medium-regular max-w-full truncate" href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GT25_MarApr_non-stacked_redemptionform.pdf" target="_blank">General Tire Spring Rebate - No CC</a><!--!-->
+                <div class="flex justify-center flex-nowrap gap-x-1 body-medium-regular"><p>03/01/25</p><!--!-->
+                    <!--!--><p>-</p>
+                    <p>04/30/25</p></div></div><div class="grid  grid-cols-[calc(100%-136px)_136px] screen768:grid-cols-[67%_33%] screen1366:grid-cols-[calc(100%-136px)_136px] gap-x-2"><a class="btn-link-blue body-medium-regular max-w-full truncate" href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GDY138615_25-TSN1_DigitalRebateForm_GYcom_10.875x9.375.pdf" target="_blank">Goodyear Q2 Rebate</a><!--!-->
+                <div class="flex justify-center flex-nowrap gap-x-1 body-medium-regular"><p>04/01/25</p><!--!-->
+                    <!--!--><p>-</p>
+                    <p>05/31/25</p></div></div><div class="grid  grid-cols-[calc(100%-136px)_136px] screen768:grid-cols-[67%_33%] screen1366:grid-cols-[calc(100%-136px)_136px] gap-x-2"><a class="btn-link-blue body-medium-regular max-w-full truncate" href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/GDY138615_25-NPP2_RebateForm_NonGYCC_7x9.pdf" target="_blank">Goodyear Q2 Rebate</a><!--!-->
+                <div class="flex justify-center flex-nowrap gap-x-1 body-medium-regular"><p>04/01/25</p><!--!-->
+                    <!--!--><p>-</p>
+                    <p>05/31/25</p></div></div><div class="grid  grid-cols-[calc(100%-136px)_136px] screen768:grid-cols-[67%_33%] screen1366:grid-cols-[calc(100%-136px)_136px] gap-x-2"><a class="btn-link-blue body-medium-regular max-w-full truncate" href="https://usvonpa1prdsharedasa05.blob.core.windows.net/homepages-documents/HK-2025-Spring-Rebate-Poster-19.5x25-2502-01.pdf" target="_blank">Hankook Spring Rebate</a><!--!-->
+                <div class="flex justify-center flex-nowrap gap-x-1 body-medium-regular"><p>04/01/25</p><!--!-->
+                    <!--!--><p>-</p>
+                    <p>05/31/25</p></div></div></div><div class="flex flex-col"><a class="btn-link-blue text-xs m-auto">View All 7  Consumer Rebates</a></div></div><!--!-->
+        </div><!--!-->
+</div></div></div><!--!--><div class="flex flex-col bg-grey screen1024:flex-row"><div class="flex flex-row bg-darkblue justify-center screen1024:justify-start items-center pt-2.5 screen1024:pt-0 gap-x-4"><div class="ml-0 screen1024:ml-10"><img class="my-auto max-w-[127px]" src="https://usafa1prdshopp1cdnfdep01-dsb2c3b8ezd9e8gy.a03.azurefd.net/images/T1_logo.png"></div><!--!-->
+        <div class="flex flex-initial text-white mt-1 border-white border-l-2 pl-4 space-x-2"><p class="font-bold">SELECT</p><!--!-->
+            <!--!--><p>LEVEL</p></div></div><!--!--><div class="right-arrow"></div><div class="flex justify-center items-center ml-0 screen1024:ml-10 mt-3 screen1024:mt-0 "><a class="btn-text-darkblue h2-bold"><!--!-->Click Here for Program Details &amp; Resources</a></div></div><!--!-->
+
+                            <div class="flex flex-col gap-4"><!--!--><div class="w-full flex"><!--!--><!--!--><div class="flex flex-auto flex-col bg-white p-3 rounded site-shadow "><div class="flex justify-between mb-2"><p class="h3-bold">Message Center</p><!--!-->
+        <div><i class="text-lg text-slate fas fa-caret-right rotate-90 origin-top-right translate-y-4 transition"></i></div></div><!--!--><div class="k-animation-container telerik-blazor relative" data-id="7ee911a7-8e83-4de6-90f4-31cfbe36885f" style=""><!--!-->
+    <!--!--><div data-id="3439d999-51c2-43dc-85cc-dee8f1dfae77" style="transition-delay: 20ms; transition-duration: 500ms;" class="k-child-animation-container"><!--!-->
+        <div class="w-full" dir="ltr" style=" "><!--!-->
+            <!--!-->
+        <div class="flex flex-auto"><!--!--><!--!-->
+<!--!--><!--!-->
+    <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+                    <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+<!--!-->
+    <!--!-->
+
+    <!--!-->
+
+    <!--!-->
+<!--!-->
+
+    <div data-id="506ccfaf-50cb-4ec9-b19d-92a7f8dcc591" class="telerik-blazor k-grid k-grid-md tbl-home mt-4 mb-6 max-h-[264px]" dir="ltr" style=""><!--!-->
+
+        <!--!--><!--!-->
+
+        
+<!--!-->
+        
+<!--!-->
+        
+<!--!-->
+        
+        <div class="k-grid-aria-root" id="654b6bca-7456-48a6-aa16-25527a25d929" role="grid" aria-label="Data table"><!--!-->
+            <!--!--><!--!-->
+<div class="k-grid-header" role="presentation"><!--!-->
+    <div class="k-grid-header-wrap" role="presentation"><!--!-->
+        <table class="k-grid-header-table k-table k-table-md" role="presentation" style="width: ;"><!--!-->
+            <colgroup><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                    <col style="width: "><!--!-->
+                    <col style="width: 120px"><!--!-->
+            </colgroup><!--!-->
+
+            <thead class="k-table-thead" role="rowgroup" data-id="68712884-aa91-4152-8ea1-0ddb6036da7d"><!--!-->
+                    <tr class="k-table-row" role="row" data-render-row-index="0"><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                            <!--!--><th data-has-children="false" data-level="1" data-cell-navigation-id="0" data-parent-col-initialization-index="-1" data-col-initialization-index="0" data-col-index="0" class="k-header k-touch-action-none text-left k-table-th" data-role="columnsorter" role="columnheader" rowspan="1" colspan="1"><!--!-->
+Subject<!--!-->
+<!--!-->
+    </th><!--!-->
+<!--!-->
+                            <!--!--><th data-has-children="false" data-level="1" data-cell-navigation-id="1" data-parent-col-initialization-index="-1" data-col-initialization-index="1" data-col-index="1" class="k-header k-touch-action-none k-table-th" data-role="columnsorter" role="columnheader" rowspan="1" colspan="1"><!--!-->
+Date Posted<!--!-->
+<!--!-->
+    </th><!--!-->
+<!--!-->
+                    </tr><!--!-->
+<!--!-->
+            </thead><!--!-->
+        </table><!--!-->
+    </div><!--!-->
+</div><!--!-->
+
+            <div class="k-grid-container"><!--!-->
+                    <!--!--><!--!--><!--!-->
+    <!--!-->    <div class="k-loader-container telerik-blazor k-loader-container-md k-loader-top" dir="ltr" style="display: none;" data-id="dc68478d-5931-4f11-8441-cf3a39d468fd"><!--!-->
+            <div class="k-loader-container-overlay k-overlay-light"></div><!--!-->
+<!--!-->
+        <div class="k-loader-container-inner "><!--!-->
+<!--!-->
+            <!--!-->    <div class="k-loader telerik-blazor k-loader-spinner-3 k-loader-lg k-loader-primary" dir="ltr"><!--!-->
+        <div class="k-loader-canvas"><!--!-->
+<!--!-->                <span class="k-loader-segment"></span>
+<!--!-->                <span class="k-loader-segment"></span>
+<!--!-->                <span class="k-loader-segment"></span>
+        </div><!--!-->
+    </div><!--!-->
+<!--!-->
+                </div><!--!-->
+    </div><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                    <div class="k-grid-content " data-id="de70241c-6bf1-4855-8454-f3a594866f74"><!--!-->
+                        <div class=""><!--!-->
+                            <div class="" style="" data-translate="0" data-total="1"><!--!-->
+                                <table data-role="grid" role="presentation" class="k-grid-table k-table k-table-md" style="height: auto; width: ;"><!--!-->
+                                    <colgroup><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                                            <col class="" style="width: ;"><!--!-->
+                                            <col class="" style="width: 120px;"><!--!-->
+                                    </colgroup><!--!-->
+                                    <tbody class="k-table-tbody" role="rowgroup"><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                                            <!--!-->        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="1" data-index="0"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+<div class="flex flex-wrap gap-x-4"><p>NOW AVAILABLE!!!! Check out the NEW portal to make submitting Tire Warranties even easier with U.S. AutoForce! Click here to watch the Video!</p><a class="my-auto btn-link-blue body-medium-regular" href="https://usvonpa1prdsharedasa05.blob.core.windows.net/tutorialvideos/TireWarrantiesFeature.mp4" target="_blank"><!--!-->
+                                        Click here for info.
+                                    </a></div></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: right"><!--!-->
+11/14/2024</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+<!--!-->
+<!--!-->
+                                    </tbody><!--!-->
+                                </table><!--!-->
+                            </div><!--!-->
+                        </div><!--!-->
+                        <div class="" style=""><!--!-->
+                        </div><!--!-->
+                    </div><!--!-->
+            </div><!--!-->
+
+            
+        </div><!--!-->
+
+        
+    </div><!--!-->
+<!--!-->
+</div><!--!-->
+    <!--!-->
+        </div><!--!-->
+</div><!--!-->
+</div></div></div><!--!-->
+
+                                        <div class="w-full flex flex-col screen1280:flex-row gap-4"><div class="w-full screen1280:w-[calc(50%-8px)] flex"><!--!--><!--!--><div class="flex flex-auto flex-col bg-white p-3 rounded site-shadow h-[276px]"><div class="flex justify-between mb-2"><p class="h3-bold">Stock Order Dashboard</p><!--!-->
+        <div><button class="my-auto btn-link-blue p-0 pr-1 body-xsmall-regular"><!--!-->
+                    View All
+                </button></div></div><p class="body-medium-regular-tight mb-4">Quickly add and manage your stock orders.</p><div class="flex flex-auto"><div class="w-full"><!--!--><p class="mb-2 body-medium-bold">Quick Product Finder</p>
+            <!--!--><p class="body-medium-regular">Enter a product's item number.</p>
+            <div class="mt-2 flex w-full"><input type="text" class="flex input-text-sm" _bl_07fdb1ff-b46f-4fcf-a3cf-ad5c5a75ed7f=""><!--!-->
+                <button class="btn-darkblue ml-1 py-0.5 min-w-[64px]" disabled="">Find</button></div></div></div></div><!--!-->
+
+<!--!--></div><div class="w-full screen1280:w-[calc(50%-8px)] flex"><!--!--><!--!--><div class="flex flex-auto flex-col bg-white p-3 rounded site-shadow h-[276px]"><div class="flex justify-between mb-2"><p class="h3-bold">Recent Orders</p><!--!-->
+        <div><button class="my-auto btn-link-blue p-0 pr-1 body-xsmall-regular"><!--!-->
+                    View All
+                </button></div></div><div class="flex flex-auto"><!--!--><!--!-->
+<!--!--><!--!-->
+    <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+
+                    <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+                    <!--!--><!--!--><!--!-->
+    <!--!-->
+<!--!-->
+<!--!-->
+    <!--!-->
+
+    <!--!-->
+
+    <!--!-->
+<!--!-->
+
+    <div data-id="a13e69a5-2e9e-495a-b49d-a612408b2797" class="telerik-blazor k-grid k-grid-md tbl-home mt-4 max-h-[187px]" dir="ltr" style=""><!--!-->
+
+        <!--!--><!--!-->
+
+        
+<!--!-->
+        
+<!--!-->
+        
+<!--!-->
+        
+        <div class="k-grid-aria-root" id="74aa6e13-33b9-4500-aea5-b856cb5479c2" role="grid" aria-label="Data table"><!--!-->
+            <!--!--><!--!-->
+<div class="k-grid-header" role="presentation"><!--!-->
+    <div class="k-grid-header-wrap" role="presentation"><!--!-->
+        <table class="k-grid-header-table k-table k-table-md" role="presentation" style="width: ;"><!--!-->
+            <colgroup><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                    <col style="width: 120px"><!--!-->
+                    <col style="width: "><!--!-->
+                    <col style="width: 95px"><!--!-->
+            </colgroup><!--!-->
+
+            <thead class="k-table-thead" role="rowgroup" data-id="617d49f8-da05-4c23-8583-d1737f173abc"><!--!-->
+                    <tr class="k-table-row" role="row" data-render-row-index="0"><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                            <!--!--><th data-has-children="false" data-level="1" data-cell-navigation-id="0" data-parent-col-initialization-index="-1" data-col-initialization-index="0" data-col-index="0" aria-sort="none" class="k-header k-touch-action-none k-table-th" data-role="columnsorter" role="columnheader" rowspan="1" colspan="1"><!--!-->
+                <span class="k-cell-inner"><!--!-->
+                    <span class="k-link"><!--!-->
+                        <span class="k-column-title"><!--!-->
+Order Date                        </span><!--!-->
+
+                    </span><!--!-->
+
+<!--!-->
+                </span><!--!-->
+<!--!-->
+<!--!-->
+    </th><!--!-->
+<!--!-->
+                            <!--!--><th data-has-children="false" data-level="1" data-cell-navigation-id="1" data-parent-col-initialization-index="-1" data-col-initialization-index="1" data-col-index="1" aria-sort="none" class="k-header k-touch-action-none justify-center k-table-th" data-role="columnsorter" role="columnheader" rowspan="1" colspan="1"><!--!-->
+                <span class="k-cell-inner"><!--!-->
+                    <span class="k-link"><!--!-->
+                        <span class="k-column-title"><!--!-->
+Order #                        </span><!--!-->
+
+                    </span><!--!-->
+
+<!--!-->
+                </span><!--!-->
+<!--!-->
+<!--!-->
+    </th><!--!-->
+<!--!-->
+                            <!--!--><th data-has-children="false" data-level="1" data-cell-navigation-id="2" data-parent-col-initialization-index="-1" data-col-initialization-index="2" data-col-index="2" aria-sort="none" class="k-header k-touch-action-none justify-center k-table-th" data-role="columnsorter" role="columnheader" rowspan="1" colspan="1"><!--!-->
+                <span class="k-cell-inner"><!--!-->
+                    <span class="k-link"><!--!-->
+                        <span class="k-column-title"><!--!-->
+Status                        </span><!--!-->
+
+                    </span><!--!-->
+
+<!--!-->
+                </span><!--!-->
+<!--!-->
+<!--!-->
+    </th><!--!-->
+<!--!-->
+                    </tr><!--!-->
+<!--!-->
+            </thead><!--!-->
+        </table><!--!-->
+    </div><!--!-->
+</div><!--!-->
+
+            <div class="k-grid-container"><!--!-->
+                    <!--!--><!--!--><!--!-->
+    <!--!-->    <div class="k-loader-container telerik-blazor k-loader-container-md k-loader-top" dir="ltr" style="display: none;" data-id="7844448a-2202-4e43-baea-f456b633b6e5"><!--!-->
+            <div class="k-loader-container-overlay k-overlay-light"></div><!--!-->
+<!--!-->
+        <div class="k-loader-container-inner "><!--!-->
+<!--!-->
+            <!--!-->    <div class="k-loader telerik-blazor k-loader-spinner-3 k-loader-lg k-loader-primary" dir="ltr"><!--!-->
+        <div class="k-loader-canvas"><!--!-->
+<!--!-->                <span class="k-loader-segment"></span>
+<!--!-->                <span class="k-loader-segment"></span>
+<!--!-->                <span class="k-loader-segment"></span>
+        </div><!--!-->
+    </div><!--!-->
+<!--!-->
+                </div><!--!-->
+    </div><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                    <div class="k-grid-content " data-id="ec7455fa-97fc-4017-91fd-4f1538e59b61"><!--!-->
+                        <div class=""><!--!-->
+                            <div class="" style="" data-translate="0" data-total="16"><!--!-->
+                                <table data-role="grid" role="presentation" class="k-grid-table k-table k-table-md" style="height: auto; width: ;"><!--!-->
+                                    <colgroup><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                                            <col class="" style="width: 120px;"><!--!-->
+                                            <col class="" style="width: ;"><!--!-->
+                                            <col class="" style="width: 95px;"><!--!-->
+                                    </colgroup><!--!-->
+                                    <tbody class="k-table-tbody" role="rowgroup"><!--!-->
+<!--!-->
+<!--!-->
+<!--!-->
+                                            <!--!-->        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="1" data-index="0"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/21/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015907807<span> | HDS13630755</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Open</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="2" data-index="1"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/19/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015897293<span> | HDS13621576</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="3" data-index="2"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/19/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015897225<span> | HDS13621524</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="4" data-index="3"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/19/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015893449<span> | HDS13618216</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="5" data-index="4"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015884820<span> | HDS13610583</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="6" data-index="5"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015884319<span> | HDS13610128</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Invoiced</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="7" data-index="6"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015884319<span> | HDS13610128</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Invoiced</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="8" data-index="7"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015882978<span> | HDS13608932</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="9" data-index="8"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015882978<span> | HDS13608932</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="10" data-index="9"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015877133<span> | RMA1493066</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Invoiced</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="11" data-index="10"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015875274<span> | HDS13602307</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="12" data-index="11"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015870430<span> | HDS13598229</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="13" data-index="12"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/18/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015867751<span> | HDS13595996</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="14" data-index="13"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/17/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015836105<span> | RMA1489493</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Invoiced</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row  " data-render-row-index="15" data-index="14"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/17/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015836002<span> | RMA1489641</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Open</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+        <!--!--><!--!-->
+<tr role="row" class="k-table-row k-master-row k-alt k-table-alt-row " data-render-row-index="16" data-index="15"><!--!-->
+
+    <!--!--><!--!-->
+
+<!--!-->
+<!--!-->
+        <!--!--><!--!-->
+<!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="0" data-cell-selection-index="0" class="k-table-td" style="text-align: left"><!--!-->
+04/17/2025</td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="1" data-cell-selection-index="1" class="k-table-td" style="text-align: center"><!--!-->
+<p class="hover:underline hover:cursor-pointer">SO0015830079<span> | HDS13563989</span></p></td><!--!-->
+                        <!--!--><td role="gridcell" colspan="1" data-col-index="2" data-cell-selection-index="2" class="k-table-td" style="text-align: right"><!--!-->
+Delivered</td><!--!-->
+        <!--!-->
+</tr><!--!-->
+
+<!--!-->
+<!--!-->
+<!--!-->
+                                    </tbody><!--!-->
+                                </table><!--!-->
+                            </div><!--!-->
+                        </div><!--!-->
+                        <div class="" style=""><!--!-->
+                        </div><!--!-->
+                    </div><!--!-->
+            </div><!--!-->
+
+            
+        </div><!--!-->
+
+        
+    </div><!--!-->
+<!--!-->
+</div></div></div></div><!--!-->
+
+                                <!--!--><div class="w-full flex"><!--!--><!--!--><div class="flex flex-auto flex-col bg-white p-3 rounded site-shadow "><div class="flex justify-between mb-2"><p class="h3-bold">Saved Searches</p><!--!-->
+        <div><i class="text-lg text-slate fas fa-caret-right "></i></div></div><!--!--><div class="k-animation-container telerik-blazor relative" data-id="662fbcaf-d958-4962-8f56-3fe7373b52f6" style="display: none;"><!--!-->
+    <!--!--><div data-id="b069f60e-15a6-47b1-92d3-3523cdf85744" style="transition-delay: 20ms;transition-duration: 500ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+</div></div></div></div></div></div><!--!--></div></div></div><!--!-->
+                    <div id="footer" class="flex flex-[0_0_100%] footer-height"><!--!--><!--!--><!--!--><!--!--><div class="bg-darkblue h-full w-full flex justify-around screen768:justify-between screen1366:py-2  flex-wrap screen1366:flex-nowrap items-center"><div class="basis-full screen768:basis-1/3 screen768:max-w-max flex justify-center screen768:justify-start  py-1 screen768:py-2 px-4 items-center"><p class="body-medium-bold text-white"><!--!-->© Copyright U.S. AutoForce 2025</p></div><!--!-->
+    <div class="screen768:basis-1/3 screen768:max-w-max flex justify-end screen768:justify-center py-1 screen768:py-2 px-4 items-center space-x-4"><a class="btn-text-darkblue body-medium-bold text-white">Contact Us</a><!--!-->
+        <a class="screen768:hidden btn-text-darkblue body-medium-bold text-white">Feedback</a><!--!-->
+        <a class="screen768:hidden btn-text-darkblue body-medium-bold text-white">Terms of Use</a></div><!--!-->
+    <div class="hidden screen768:flex screen768:basis-1/3 screen768:max-w-max justify-start screen768:justify-center screen1366:justify-end py-1 screen768:py-2 px-4 items-center"><a class="btn-text-darkblue body-medium-bold text-white">Feedback</a></div><!--!-->
+    <div class="hidden screen768:flex screen768:basis-1/3 screen768:max-w-max justify-start screen768:justify-center screen1366:justify-end py-1 screen768:py-2 px-4 items-center"><a class="btn-text-darkblue body-medium-bold text-white">Terms of Use</a></div></div><!--!-->
+<!--!--><!--!--><!--!--></div></main></div><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!--><!--!-->
+    <!--!--><!--!-->
+    <!--!--><!--!--><!--!--><!--!--><!--!-->
+                <!--!--><!--!--><!--!--><!--!-->
+                <!--!--><!--!--><!--!--><!--!-->
+                <!--!--><!--!--><div class="k-notification-group " style="top: 0px;flex-wrap: wrap; align-items: center; left: 50%; transform: translateX(-50%);"><!--!-->
+</div><!--!-->
+                <!--!--><div class="k-overlay bg-slate hidden" tabindex="0"></div><!--!-->
+
+<!--!--><div class="k-animation-container telerik-blazor sitedrawer rightsitedrawer" data-id="61939d88-af5b-4c2f-a5f2-95db48452ffd" style="top: 0px; max-height: 1100px; display: none;"><!--!-->
+    <!--!--><div data-id="43ac7117-a09b-4392-93e7-e8684d231a5c" style="transition-delay: 20ms;transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+</div><!--!-->
+                <!--!--><!--!--><!--!-->
+<!--!--><!--!-->
+<!--!--><!--!-->
+<!--!--><!--!-->
+<!--!--><!--!-->
+<!--!--><!--!-->
+                <div id="tempOverlay" class="k-overlay bg-slate hidden"></div>
+                <!--!--><!--!-->
+    <span id="userId" class="hidden">144179</span><!--!-->
+    <span id="dealerId" class="hidden">Norris Tire Champaign (53616)</span><!--!-->
+
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="db152ec0-6d3b-45c4-8e18-d448afc9d102" id="29740fd5-f97f-4099-881d-003b9053db5c" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="cfdde816-7c24-4d3f-aec9-3936162cc935" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="59ef9786-4b2b-4e1c-bacd-e62e2f1b2358" id="aa6f49f2-e51f-4c50-8455-179f17e06d97" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="8da6781c-6db9-4024-83db-84837c60ba95" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="ef50f8d5-58f9-4605-9f76-a8ff4a2414b2" id="8cf3939a-dbc8-4c31-8d06-6f213a3c2218" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="a468b832-7ef0-42f0-8075-200b224f1214" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="fabf6cdd-32af-4159-806f-ae9c9e5f03ba" id="d3d65417-bb85-4168-a25d-e51217e351f8" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="9e2c1ee9-0601-4ac5-9cac-db306814e191" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="a72863bd-af80-4b76-a35f-3a13adf8231c" id="761939b4-87c8-4468-8e41-29e8389b1e66" dir="ltr" style="overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="a646acf5-b5a1-4a5b-bd16-5b0b611f20d8" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor ship-by-timeframe" data-id="fdacedad-a160-4193-a4eb-36b0aad31357" id="87be7456-35cf-436d-91c0-6bba011bf49a" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="e2bb7f84-a3de-4664-9338-aa5c2dd3c8a1" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor orderhistory-customer" data-id="1e6adaff-5f8f-4b9e-9447-1691cde2ce6f" id="b1e5375b-1a94-4d54-b02e-e0183a9c65fb" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="78a28e1f-fdfa-47c5-bcf9-40eb0abdcd69" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="6d712908-f188-44d4-8d07-1075c3831b05" id="7180e6e0-8178-4a2f-abe5-8029a1835b44" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="438035bb-5986-4699-9a8a-044385d6f6b2" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor promo on-special" data-id="34b64b7c-eaeb-41d8-9c77-23fce872e3cb" id="c96f1a38-2d94-4f29-a70a-29aded1e21c5" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="ac6743f2-cbde-4371-9e68-30befbb37c3a" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor promo dealer-special" data-id="f4e4a24e-c2ae-4cec-8da3-7bedf4f54876" id="356f1341-8094-4bbc-adac-ab3636574c2a" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="efd07cf5-3f59-43df-9ded-ac1c50e42be6" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor promo usaf-promo" data-id="7907bad3-a227-400b-986e-48b1561a2402" id="a561a273-ca91-4461-b5cf-d92df26fbaeb" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="4aa86597-b39a-4ab0-bbfb-320d8df5ceed" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor promo mfg-promo" data-id="d1d5935b-645f-454e-aa50-58e704d2eab5" id="d6ba1016-c5ec-4526-b977-5acb0a97a75f" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="d3aba40a-ce52-4381-b2c2-73655ce04477" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor promo part-promo" data-id="86fcaa56-de3a-470e-8bb2-5944127fdae5" id="2f0c1a59-90dd-4461-b32b-bb0c07025adf" dir="ltr" style="width: auto; overflow: visible; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="f0f47064-7943-40a1-b2b8-eb16bb5c7698" style="display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor ddlSupplyCategoryPopUp" data-id="56e2a8fd-2991-4dc9-821b-8ea48cca5d6c" role="region" aria-label="Options list" id="218ad7aa-120c-47e0-bdb4-c632040cc9d7" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="b8101dc9-84b2-4b40-9303-dd2a35903429" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor ddlSupplyTypePopUp" data-id="2f21c541-7bfc-4acc-ba45-59520c0947a0" role="region" aria-label="Options list" id="9adbf030-31a5-41ba-bb91-8eed9e369cfb" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="9d806dec-48dd-4bcb-8d30-446afdb19148" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="e705a17f-5fac-43d9-8505-930482e26c3f" role="region" aria-label="Options list" id="2a443162-1e20-4fcf-af84-1a062a46d033" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="94935a38-8a4d-4d64-b834-314579fa7053" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="f9f77a19-d1fc-4ffe-90c1-b6e1bc3d2287" role="region" aria-label="Options list" id="643ec870-b6e2-42e0-acc6-e8fba86aefe6" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="e79fe240-b728-4d9f-bcfc-414a2862a5ef" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="346dcf8f-8128-4348-aa2c-2355d1d42237" role="region" aria-label="Options list" id="28ac67c2-b979-4f80-9dd5-1e55c2d26cf0" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="3e215ed2-006a-411f-9107-4cbe77329267" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="f9254d20-4b06-45c7-9a04-f55c0d7a4d90" role="region" aria-label="Options list" id="b045d9bf-9dd0-4e15-8420-8ca14e91cee3" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="5d7c759c-ee67-4cae-9d97-ea8cfd720fdc" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor k-animation-container-shown" data-id="e49dd273-9d9d-4a7b-81bd-c5c3c1024469" role="region" aria-label="Options list" id="14588fa3-8eb9-4a74-a493-42bf592ea0cc" dir="ltr" style="height: auto; min-width: fit-content; left: 41px; top: 606px; width: 318px; z-index: 10002;"><!--!-->
+        <!--!--><div data-id="a5a4c67a-5991-44d4-b555-ef1e5e8ff2e8" style="transition-duration: 300ms;" class="k-child-animation-container"><!--!-->
+        <div class="k-popup k-list-container k-dropdownlist-popup" dir="ltr" style="height: auto;max-height: 200px "><!--!-->
+            <!--!-->
+            <!--!-->
+            <!--!-->
+    <!--!-->
+            <!--!-->
+<!--!-->
+        <!--!--><div class="k-list k-list-sm"><!--!-->
+<!--!-->
+        <!--!--><div class="k-list-optionlabel k-selected k-focus telerik-blazor" id="4cc66891-aac9-4429-8c15-84e680ce90f8" style="" tabindex="-1"><!--!-->
+    Select Year<!--!-->
+</div><!--!-->
+<!--!-->
+<!--!-->
+        <!--!-->    <div class="k-list-content"><!--!-->
+        <!--!-->
+            <ul class="k-list-ul" id="58cdc071-9d0c-4317-9e25-34c3da50d5b9" aria-label="Select Year" aria-live="polite" role="listbox"><!--!-->
+                        <!--!--><li role="option" tabindex="0" class="k-list-item   telerik-blazor" id="38075b58-5ca9-499d-a7a6-bf4f8edd1a35" style="" data-item-index="0" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2025<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="504a459b-1971-424b-a2ed-dbfaa79c0869" style="" data-item-index="1" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2024<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="5ad95336-cc14-4e6f-b6ee-3243b4a03b9a" style="" data-item-index="2" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2023<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="65bb2b74-2298-41a2-b3e7-91dbd7965574" style="" data-item-index="3" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2022<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="607759f2-1c4a-460b-848d-9a79097999cf" style="" data-item-index="4" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2021<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="f190b87f-1c06-408f-a0d6-90480787da99" style="" data-item-index="5" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2020<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="e754b4db-0015-4b2d-86fb-7c5a1e48ce9c" style="" data-item-index="6" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2019<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="d1bb6288-ef60-493b-82aa-a571162bcd84" style="" data-item-index="7" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2018<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="88654747-ee63-4124-a0a7-b13bdf0d3e26" style="" data-item-index="8" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2017<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="fee537a2-4ab5-4a9d-a49c-15ace788b172" style="" data-item-index="9" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2016<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="1d81a219-fd94-4812-8030-4c0c26584916" style="" data-item-index="10" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2015<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="6a1d4089-f56a-4262-bb62-c85c618067a9" style="" data-item-index="11" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2014<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="7f16e24d-1243-45a1-8418-2c12456ebbee" style="" data-item-index="12" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2013<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="37ae45d6-784a-40b9-88cd-b5cbd332c9d5" style="" data-item-index="13" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2012<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="66590a2e-795c-4956-9f65-9af0855cd38d" style="" data-item-index="14" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2011<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="8c2b3728-feed-4177-84c0-758e3a87b243" style="" data-item-index="15" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2010<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="6fa1cb4d-bc20-4ef3-a84d-68a1d05501eb" style="" data-item-index="16" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2009<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="b3dff821-541e-4f64-931f-505361594737" style="" data-item-index="17" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2008<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="a6fe6378-6f48-4760-808c-639c18a9c9df" style="" data-item-index="18" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2007<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="d2ebf10d-f806-458b-8892-cbb3b6f0838d" style="" data-item-index="19" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2006<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="5938b764-e9e8-4346-a606-9c1b297fd8cf" style="" data-item-index="20" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2005<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="842e89df-8800-45a3-ada1-6623f12e257c" style="" data-item-index="21" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2004<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="33419b65-d4e0-4bfd-b147-d57ed294508d" style="" data-item-index="22" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2003<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="7022a4e0-5a08-476c-a442-e9d806ad3b27" style="" data-item-index="23" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2002<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="ce9f2bf2-58f4-4d09-9590-fd59f3717c35" style="" data-item-index="24" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2001<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="cec1e04c-6398-4c3f-8172-0acad94313e8" style="" data-item-index="25" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            2000<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="5043f6e7-ed8f-4cb2-8208-30b60c599922" style="" data-item-index="26" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1999<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="5cfaef20-7bb7-41d1-bc77-062c6dc092f5" style="" data-item-index="27" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1998<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="968a17ef-bc61-4423-8f00-c258a5401f80" style="" data-item-index="28" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1997<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="1d1998e8-3395-473c-bbe4-22ccf5fccf51" style="" data-item-index="29" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1996<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="03eca761-8ee2-4eae-b86f-eb39e6e2195b" style="" data-item-index="30" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1995<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="d4ef59c3-63de-473e-936a-1ad9a5ed62f6" style="" data-item-index="31" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1994<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="eb0e6ea9-7c17-4230-9c66-e8c1728c9036" style="" data-item-index="32" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1993<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="967220ec-ef3d-43b5-a1df-03474c391161" style="" data-item-index="33" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1992<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="660a4835-1a99-47a1-9fe1-313b865e804f" style="" data-item-index="34" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1991<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="0a9f409a-069b-4cc8-8c7e-94ac30d2d7c2" style="" data-item-index="35" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1990<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="5b13e70b-9f76-4ea9-8b08-a823042d5600" style="" data-item-index="36" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1989<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="fd62a194-ea48-4f1e-af74-8b212572d2be" style="" data-item-index="37" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1988<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="b4a7f417-c1e7-4985-a909-1e5461f9edab" style="" data-item-index="38" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1987<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="4234cbe1-d7a2-4c40-aea0-21db6cc1b811" style="" data-item-index="39" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1986<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="57e48da2-8e43-4194-a658-c67ef9211610" style="" data-item-index="40" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1985<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="f90e254a-d464-4e88-9c48-3e8213c2f4da" style="" data-item-index="41" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1984<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="1e0e947d-2fbc-4441-8343-e07235a5a510" style="" data-item-index="42" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1983<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="b9a72953-ef34-4bae-bf12-8f971c9f15a8" style="" data-item-index="43" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1982<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="b43b2a75-ef68-443c-908e-e282e20e9927" style="" data-item-index="44" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1981<!--!-->
+        </span><!--!-->
+</li><!--!-->
+                        <!--!--><li role="option" tabindex="-1" class="k-list-item   telerik-blazor" id="e0b6f42f-24de-4b86-aff8-43f809374779" style="" data-item-index="45" aria-describedby="" aria-selected="false"><!--!-->
+        <span class="k-list-item-text"><!--!-->
+            1980<!--!-->
+        </span><!--!-->
+</li><!--!-->
+            </ul><!--!-->
+        <!--!-->
+    </div><!--!-->
+<!--!-->
+<!--!-->
+</div><!--!-->
+    <!--!-->
+        <!--!-->
+        <!--!-->
+        </div><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="865cfe4d-856c-4562-88c5-80e5cc235617" role="region" aria-label="Options list" id="eea6530a-5ab8-45bd-af2c-b8b3482fe92c" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="4230f465-7e75-4111-8b98-cf1eb130100b" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="9de3aaa6-ff68-4d0b-b602-e60312d3710c" role="region" aria-label="Options list" id="21515095-ad05-47f3-b265-fd77bef8d378" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="57fa272e-f5f2-425f-adb0-cc3be551d777" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="8a3635f4-814f-4382-828e-232643c7d4e5" role="region" aria-label="Options list" id="72eab80d-a859-405f-a9cc-0c1415509fbf" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="4f2d61a6-e025-427a-8803-7e3451fdefed" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="f6f146d0-10ac-49ca-b04c-f131d39a0e4b" role="region" aria-label="Options list" id="550c8ad3-e759-416a-89d3-e9020936a859" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="12c0334f-63fd-4e67-9ade-93c51e96bb2c" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="a5844367-ff48-4f09-95a3-b4024349c3aa" role="region" aria-label="Options list" id="36ac5df5-cd19-41ed-b3d2-ef60b251980d" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="a4e6926c-da3a-411c-a424-07bd44c24f84" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="e4629d2a-1abf-438b-b2ae-20b5193a4e26" role="region" aria-label="Options list" id="4604941f-0246-4dfb-b1eb-c2fc4d2f0472" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="cca8876e-7fb5-4269-8e28-c8a8ba1369cc" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="d04ccf2b-ac52-4865-a548-0de6be143ccc" role="region" aria-label="Options list" id="94fd23ce-97d6-4231-a7a3-d126f8df7b6c" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="7f1a9bfd-8cc3-4171-b660-fe5aac457819" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="2062b5a7-34cb-4e2c-b911-753a4052ee8a" role="region" aria-label="Options list" id="2c69ffb0-1f0e-46cf-95df-f3510157af87" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="20acacfb-a94e-4576-9611-42097042cee8" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+            <!--!--><!--!-->
+<!--!-->
+    <div class="k-animation-container telerik-blazor " data-id="735cb85e-030c-449b-940b-9f831530bf64" role="region" aria-label="Options list" id="048cb538-0724-4f6a-b26c-473fc717b7b0" dir="ltr" style="height: auto; min-width: fit-content; left: -10000px; top: 0px; display: none;"><!--!-->
+        <!--!--><div data-id="cff0b7c7-138f-457b-8300-9a85a596186c" style="transition-duration: 300ms;display: none" class="k-child-animation-container"><!--!-->
+</div><!--!-->
+    </div><!--!-->
+            <!--!-->
+    <!--!-->
+<!--!-->
+
+<!--!--><!--!-->
+<!--!--><!--!-->
+<!--!--><!--!-->
+
+<!--!--><!--!--><div id="blazor-error-ui" class=""><div class="flex flex-col min-h-full"><div class="login-container mt-[86px] screen768:mt-32 "><img class="w-full" src="https://usafa1prdshopp1cdnfdep01-dsb2c3b8ezd9e8gy.a03.azurefd.net/images/USAF_USVco_text_CMYK.svg" alt="U.S. AutoForce"></div><!--!-->
+        <div class="flex flex-col flex-auto justify-center items-center space-y-8 text-center"><p class="h1-bold text-darkblue"><!--!--><i class="fas fa-car-burst"></i></p><!--!-->
+            <div class="text-center"><!--!--><p class="h3-bold">A critical error has occurred.</p><!--!--><p class="h3-bold">This application may no longer respond until reloaded.</p></div><!--!--><button class="btn-darkblue p-4 w-60 mx-auto" onclick="window.location.reload();"><i class=" pr-2 fas fa-redo-alt"></i>
+                    Attempt Reload
+                </button></div><!--!-->
+        <!--!--><!--!--><!--!--><!--!-->
+    <!--!--><!--!--><!--!-->
+
+<!--!-->
+    <!--!--><!--!-->
+        <footer class="container flex flex-wrap mx-auto gap-y-4"><div class="flex flex-[0_0_100%] justify-center"><p class="px-1 inline-block body-medium-regular text-center"><!--!--><a class="btn-link-slate body-medium-regular w-fit" href="/termsofuse">Terms</a>
+                <!--!--><span class="inline-block pr-2">|</span>
+                <!--!--><span class="hidden screen768:inline-block pr-2">|</span>
+                <span class="block mt-4 screen768:inline-block screen768:mt-0">Customer Service: <a class="btn-link-slate body-medium-regular" href="tel:8004904901">(800)-490-4901</a></span></p></div><!--!-->
+ 
+        <div class="flex flex-[0_0_100%] mb-6 justify-center"><p class="px-1 inline-block body-medium-regular text-center"><span class="block screen768:inline-block"><!--!-->© Copyright U.S. AutoForce 2025.</span><!--!-->
+                <!--!--><span class="block screen768:inline-block">U.S. AutoForce a division of U.S. Venture.</span></p></div></footer><!--!-->
+
+            <!--!--><!--!-->
+<!--!-->
+            <!--!-->
+    <!--!-->
+<!--!-->
+
+<!--!--><!--!-->
+<!--!--><!--!-->
+<!--!--><!--!-->
+
+<!--!--></div></div>
+    <div id="blazor-reconnect-ui" class="hover:cursor-wait" style="opacity: 80%; display: none;"><div class="h-full flex flex-col items-center justify-center"><div class="max-w-[320px] screen768:max-w-[385px] flex flex-col items-center justify-center gap-10"><img src="https://usafa1prdshopp1cdnfdep01-dsb2c3b8ezd9e8gy.a03.azurefd.net/images/USAF_USVco_text_CMYK.svg" alt="USAutoForce Logo">
+                <div class="w-full rounded overflow-hidden h-6"><div class="h-full w-full rounded origin-[0%_50%] animate-[loadingBar_1.5s_infinite_linear] bg-darkblue"></div></div></div></div></div>
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    <script src="_content/Powerlane.Blazor.Shared/js/boot.js?v=ncjJj45WW5yOYP-C_7C1eMCyHU-132J-qE--ypiSyjc" asp-append-version="true"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="_content/Powerlane.Blazor.Shared/js/circuitError.js?v=K8NcpTT4PVrbKJa9RpSbpiYyUzBGuz41URyZRD6SaaU" asp-append-version="true"></script>
+    <script>
+        // hides blazor server reconnect message when performing navigation requests (causes unload)
+        window.addEventListener('beforeunload', function () {
+        if(Blazor.defaultReconnectionHandler) {
+            Blazor.defaultReconnectionHandler._reconnectionDisplay = {};
+        }
+        });
+        // the Telerik object is not present, notify user
+        if (!window.TelerikBlazor) {
+            alert("For the best experience while using this website, please make sure that your internet browser, or mobile device operating system is up to date.");
+        }
+        // create redirect to blazor cookie if users is logged in on this(blazor) site
+        document.addEventListener("DOMContentLoaded", function (event) {
+        var date = new Date(2038, 1, 1, 0, 0, 0);
+        var domain = ".usautoforce.com";
+        if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+            domain = "localhost"
+        }
+            expires = "; expires=" + date.toUTCString();
+            document.cookie = "RedirectToBlazor=True;" + expires + ";domain=" + domain + ";secure;SameSite=Lax";
+        });
+    </script></body></html>
